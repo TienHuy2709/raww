@@ -120,10 +120,21 @@
 
 //  Primary button
 @button-primary__hover__color: @color-white;
-@button-primary__active__background: @link__hover__color;
-@button-primary__active__border: 1px solid @link__hover__color;
-@button-primary__active__color: @color-white;
+@button-primary__active__background: @color-white;
+@button-primary__active__border: 1px solid @button__color-default-raw;
+@button-primary__active__color: @color-black;
 
+@button-primary__background: @button__color-default-raw;
+@button-primary__color: @color-white;
+@button-primary__line-height: 20px;
+@button-primary__font-size: 15px;
+@button-primary__border: 1px solid @button__color-default-raw;
+@button-primary__hover__background: @button__color-default-raw__hover;
+@button-primary__hover__color: @color-white;
+@button-primary__hover__border: 1px solid @button__color-default-raw__hover;
+@button-primary__active__background: @button__color-default-raw__hover;
+@button-primary__active__color: @color-white;
+@button-primary__active__border: 1px solid @button__color-default-raw__hover;
 //  Button with icon
 @button-icon__line-height: @icon-font__line-height;
 
@@ -295,3 +306,4 @@
 //  ---------------------------------------------
 
 @copyright__background-color: @color-gray-middle4;
+

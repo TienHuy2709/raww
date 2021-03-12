@@ -1,0 +1,32 @@
+.control.product {
+    display: flex;
+    max-width: 7%;
+    border: 1px solid @color-gray-light01;
+    border-radius: 3px;
+    font-size: 15px;
+    line-height: 20px;
+    color: #31251c;
+    text-align: center;
+    button {
+        .lib-button(
+            @_button-font-size: 15px,
+            @_button-line-height: 20px,
+            @_button-width: 12px,
+            @_button-color: #31251c,
+            @_button-background: @color-white,
+            @_button-border: 0px,
+            @_button-color-hover: @color-black,
+            @_button-background-hover: @color-white,
+            @_button-border-hover: 0px,
+            @_button-color-active: @color-black,
+            @_button-background-active: @color-white,
+            @_button-border-active: 0px
+        );
+    }
+    input[type="number"] {
+        .lib-css(border, 0);
+        &:focus{
+            box-shadow: none;
+        }
+    }
+}

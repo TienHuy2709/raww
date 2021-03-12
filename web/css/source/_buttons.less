@@ -21,6 +21,9 @@
             &:active {
                 .lib-css(box-shadow, @button__shadow-active);
             }
+            &:hover{
+                box-shadow: none;
+            }
         }
     }
 
@@ -42,4 +45,20 @@
     .action.primary {
         .lib-button-primary();
     }
+    .hollow-button {
+        .lib-button(
+            @_button-color: @color-black,
+            @_button-background: @color-white,
+            @_button-border: 2px solid @button__color-hollow,
+            @_button-color-hover: @color-black,
+            @_button-background-hover: @button__color-hollow,
+            @_button-border-hover: 2px solid @button__color-hollow,
+            @_button-color-active: @color-black,
+            @_button-background-active: @button__color-hollow,
+            @_button-border-active: 2px solid @button__color-hollow,
+            @_button-font-size: 15px,
+            @_button-line-height: 20px
+        );
+    }
+
 }

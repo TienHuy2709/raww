@@ -1,0 +1,16 @@
+-Home :
+    + the a banner : tu style
+    + con lai la chung style guide
+    + list product la widget
+    + input in header : tu style
+    + input in footer : style guide
+    + input number : style guide
+
+-Category:
+    + accodion : san trong magento
+    + attribute : tu style
+    + color : khac vs detail -> them class de style
+
+-Detail :
+    + input number: style guide
+    + color : khac vs category -> them class de style
