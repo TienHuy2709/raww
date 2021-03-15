@@ -62,6 +62,30 @@
         @font-display: swap
     );
 
+    .lib-font-face(
+        @family-name: @font-family-name__la-brands,
+        @font-path: '@{baseDir}fonts/la-brands-400',
+        @font-weight: 400,
+        @font-style: normal,
+        @font-display: swap
+    );
+
+    .lib-font-face(
+        @family-name: @font-family-name__la-regular,
+        @font-path: '@{baseDir}fonts/la-regular-400',
+        @font-weight: 400,
+        @font-style: normal,
+        @font-display: swap
+    );
+
+    .lib-font-face(
+        @family-name: @font-family-name__la-solid,
+        @font-path: '@{baseDir}fonts/la-solid-900',
+        @font-weight: 900,
+        @font-style: normal,
+        @font-display: swap
+    );
+
 
 
 }
@@ -71,16 +95,6 @@
 //  _____________________________________________
 
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
-    h1 {
-        .lib-css(font-size, @h1__font-size-desktop);
-        .lib-css(margin-bottom, @h1__margin-bottom__desktop);
-    }
-    // h1 {
-    //    //.lib-css(font-size, @h1__font-size-desktop);
-    //    //.lib-css(margin-bottom, @h1__margin-bottom__desktop);
-
-    // }
-
 
 }
 
