@@ -162,14 +162,6 @@ label {
             &:focus {
                 .lib-css(box-shadow, none);
             }
-            option {
-                background-color: white;
-                color: gray;
-                cursor: pointer;
-                &:hover {
-                    color: #EC6F66;
-                }
-            }
         }
         select option:checked {
             background-color: @color-gray-light0;
@@ -181,14 +173,14 @@ label {
 
 
 & when (@media-common = true) {
-    // .icon-awesome a{
-    //     font-size: 24px;
-    //     .lib-css(color, @icon-color);
-    //     .lib-css(cursor, pointer);
-    //     &:hover {
-    //         .lib-css(color, @icon-color-hover);
-    //     }
-    // }
+     .icon-awesome a{
+         font-size: 24px;
+         .lib-css(color, @icon-color);
+         .lib-css(cursor, pointer);
+         &:hover {
+             .lib-css(color, @icon-color-hover);
+         }
+     }
 
     .icons {
         text-align: center;
@@ -202,7 +194,7 @@ label {
             line-height: 15px;
             text-transform: uppercase;
             display: contents;
-            font-weight: 800;
+            font-weight: 700;
             color: @theme__color__primary;
             &:hover {
                 color: @theme__color__primary;
