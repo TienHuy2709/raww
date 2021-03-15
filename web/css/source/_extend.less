@@ -33,6 +33,7 @@
     }
 }
 
+
 input {
     background-color: #f4f4f4;
     &:not([disabled]):focus {
@@ -178,3 +179,35 @@ label {
 }
 
 
+
+& when (@media-common = true) {
+    // .icon-awesome a{
+    //     font-size: 24px;
+    //     .lib-css(color, @icon-color);
+    //     .lib-css(cursor, pointer);
+    //     &:hover {
+    //         .lib-css(color, @icon-color-hover);
+    //     }
+    // }
+
+    .icons {
+        text-align: center;
+        &-image {
+            position: relative;
+        }
+        &-text {
+            position: absolute;
+            font-family: @font-family__avenir-black;
+            font-size: 14px;
+            line-height: 15px;
+            text-transform: uppercase;
+            display: contents;
+            font-weight: 800;
+            color: @theme__color__primary;
+            &:hover {
+                color: @theme__color__primary;
+
+            }
+        }
+    }
+}

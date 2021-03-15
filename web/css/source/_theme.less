@@ -19,16 +19,60 @@
 @icons__font-path: '@{baseDir}fonts/Luma-Icons';
 @icons__font-name: 'luma-icons';
 
+@font-family-name__avenir-black: 'avenir-black';
+@font-family__avenir-black: @font-family-name__avenir-black, @font-family__sans-serif;
+
+@font-family-name__avenir-heavy: 'avenir-heavy';
+@font-family__avenir-heavy: @font-family-name__avenir-heavy, @font-family__sans-serif;
+
+@font-family-name__avenir-roman: 'avenir-roman';
+@font-family__avenir-roman: @font-family-name__avenir-roman, @font-family__sans-serif;
+
 //  Color nesting
 @panel__background-color: @color-gray-light0;
 @border-color__base: @color-gray80;
+
+@theme__color__primary: @color-black1;
+@theme__color__primary-alt: @color-black2;
+@theme__color__secondary: @color-black3;
 
 //  Headings
 @h3__font-weight: @font-weight__semibold;
 @h3__margin-top: @indent__base;
 
+@h1__font-size: 32px;
+@heading__font-family__base: @font-family__avenir-heavy;
+@heading__color__base: @theme__color__primary;
+@heading__line-height__base: 42px;
+@h1__letter-spacing: -0.25px;
+
+@h2__font-size: 26px;
+@h2__letter-spacing: -0.25px;
+
+@h3__font-size: 18px;
+@h3__letter-spacing: -0.25px;
+
+@h4__font-size: 15px;
+@h4__letter-spacing: 0px;
+
+@h5__font-size: 14px;
+@h5__letter-spacing: 0.5px;
+@h5__font-family: @font-family__avenir-black;
+
+@p__color: @theme__color__primary;
+@p__font-family: @font-family-name__avenir-roman;
+@p__font-size: 15px;
+@p__line-height: 24px;
+
+
+
 //  Links
 @link__color: @theme__color__primary-alt;
+@link__hover__color:@theme__color__secondary;
+
+@a__font-family: @font-family-name__avenir-roman;
+@a__font-size: 15px;
+@a__line-height: 24px;
 
 //  Focus
 @focus__color: @color-blue3;
@@ -151,6 +195,9 @@
 @icon-arrow-down-thin: false;
 @icon-wishlist-empty: '\e601';
 
+@icon-color: @icon__color-default;
+@icon-color-hover: @icon__color-hover-default;
+
 //
 //  Messages
 //  ---------------------------------------------
@@ -162,6 +209,14 @@
 @message-icon__top: 22px;
 @message-error-icon: @icon-error;
 @message-success-icon: @icon-success;
+
+@message-success__background: @color-white;
+@message-success__color: @color-green1;
+@message-success__border-color: @color-green1;
+@message-error__color: @color-red1;
+@message-error__border-color: @color-red1;
+@message-error__background: @color-white;
+
 
 //
 //  Loaders
