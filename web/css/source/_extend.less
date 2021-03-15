@@ -39,7 +39,6 @@ input {
     &:not([disabled]):focus {
         .lib-css(box-shadow, none);
     }
-
     // input checkbox
     &[type="checkbox"] {
         .lib-css(visibility, hidden);
@@ -57,7 +56,6 @@ input {
             .lib-css(top, 0);
             .lib-css(margin, 4px 4px 4px 8px);
         }
-
         & + label:before {
             .lib-css(opacity, 0.4);
             .lib-css(border, 1px solid @color-ddd);
@@ -70,7 +68,6 @@ input {
             .lib-css(height, 20px);
         }
     }
-
     //input radio
     &[type="radio"] {
         .lib-css(visibility, hidden);
@@ -87,7 +84,6 @@ input {
             .lib-css(margin, 7px);
             .lib-css(border-radius, 50%);
         }
-
         & + label:before {
             .lib-css(opacity, 0.4);
             .lib-css(border-radius, 50%);
@@ -103,10 +99,8 @@ input {
         }
     }
 }
-
 label {
     .lib-css(cursor, pointer);
-    .lib-css(position, relative);
 }
 
 .not-disable {
@@ -128,9 +122,7 @@ label {
             & + label:before {
                 .lib-css(opacity, 1);
             }
-
         }
-
         //input radio
         &[type="radio"] {
             .lib-css(visibility, hidden);
@@ -145,7 +137,6 @@ label {
                 .lib-css(border, 1px solid @color-ddd);
                 .lib-css(border-radius, 50%);
             }
-
             & + label:before {
                 .lib-css(opacity, 1);
             }
@@ -156,8 +147,6 @@ label {
     .control.select {
         .lib-css(max-width, 380px);
         input[type="text"], select {
-            font-size: 15px;
-            line-height: 24px;
             &:not([disabled]):focus,
             &:focus {
                 .lib-css(box-shadow, none);
@@ -166,11 +155,8 @@ label {
         select option:checked {
             background-color: @color-gray-light0;
         }
-
     }
 }
-
-
 
 & when (@media-common = true) {
      .icon-awesome a{
@@ -196,7 +182,6 @@ label {
          
          
      }
-
     .icons {
         text-align: center;
         &-image {
@@ -213,8 +198,11 @@ label {
             color: @theme__color__primary;
             &:hover {
                 color: @theme__color__primary;
-
             }
         }
     }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> master
