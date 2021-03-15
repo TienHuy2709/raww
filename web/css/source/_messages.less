@@ -11,10 +11,20 @@
 
     .message.info {
         .lib-message-icon-inner(info);
+       
+        
     }
 
     .message.error {
         .lib-message-icon-inner(error);
+        border: 1px solid  @message-error__border-color;
+        text-align: center;
+        font-family: @font-family-name__avenir-roman;
+        font-size: 15px;
+        line-height: 20px;
+        &> *:first-child:before {
+            display: none;
+        }
     }
 
     .message.warning {
@@ -27,5 +37,13 @@
 
     .message.success {
         .lib-message-icon-inner(success);
+        border: 1px solid  @message-success__border-color;
+        text-align: center;
+        font-family: @font-family-name__avenir-roman;
+        font-size: 15px;
+        line-height: 20px;
+        &> *:first-child:before {
+            display: none;
+        }
     }
 }
