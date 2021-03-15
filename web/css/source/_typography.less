@@ -1,4 +1,5 @@
 // /**
+// /**
 //  * Copyright © Magento, Inc. All rights reserved.
 //  * See COPYING.txt for license details.
 //  */
@@ -39,6 +40,8 @@
         @font-style: normal,
         @font-display: swap
     );
+<<<<<<< HEAD
+=======
 
     .lib-font-face(
         @family-name: @font-family-name__avenir-black,
@@ -61,7 +64,8 @@
         @font-display: swap
     );
 
-    
+
+
 }
 
 //
@@ -69,13 +73,17 @@
 //  _____________________________________________
 
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    h1 {
+        .lib-css(font-size, @h1__font-size-desktop);
+        .lib-css(margin-bottom, @h1__margin-bottom__desktop);
+    }
     // h1 {
     //    //.lib-css(font-size, @h1__font-size-desktop);
     //    //.lib-css(margin-bottom, @h1__margin-bottom__desktop);
-        
+
     // }
 
-   
+
 }
 
 //
@@ -87,36 +95,37 @@
         .lib-list-reset-styles();
     }
 
+
     h1 {
          letter-spacing: @h1__letter-spacing;
          color: red;
-         
+
      }
- 
+
      h2 {
          letter-spacing: @h2__letter-spacing;
      }
- 
+
      h3 {
          letter-spacing: @h3__letter-spacing;
      }
- 
+
      h4 {
          letter-spacing: @h4__letter-spacing;
      }
- 
+
      h5 {
          letter-spacing: @h5__letter-spacing;
          text-transform: uppercase;
      }
- 
+
      p {
          font-family: @p__font-family;
          color: @p__color;
          line-height: @p__line-height;
          font-size: @p__font-size;
      }
- 
+
      a {
          font-family: @a__font-family;
          font-size: @a__font-size;
