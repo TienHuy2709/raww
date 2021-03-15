@@ -160,12 +160,27 @@ label {
 
 & when (@media-common = true) {
      .icon-awesome a{
-         font-size: 24px;
-         .lib-css(color, @icon-color);
-         .lib-css(cursor, pointer);
-         &:hover {
-             .lib-css(color, @icon-color-hover);
-         }
+        text-decoration: none;
+        &:nth-child(1)::after {
+            content: '\f39e';
+            font-family: @font-family-name__la-brands;
+            font-size: 24px;
+            .lib-css(color, @icon-color);
+            .lib-css(cursor, pointer);
+        }
+        &:nth-child(2)::after {
+            content: '\f16d';
+            font-family: @font-family-name__la-brands;
+            font-size: 24px;
+            .lib-css(color, @icon-color);
+            .lib-css(cursor, pointer);
+        }
+        &:hover::after {
+            .lib-css(color, @icon-color-hover);
+            
+        }
+         
+         
      }
     .icons {
         text-align: center;
@@ -187,4 +202,3 @@ label {
         }
     }
 }
-
