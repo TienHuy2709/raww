@@ -1,0 +1,183 @@
+/*-------------------------Main-Banner-Category---------------------*/
+& when (@media-common = true) {
+    .page-main {
+        max-width: 100%;
+        padding: 0px;
+        box-sizing: unset;
+        margin: 0 auto;
+        .page-title-wrapper {
+            position: relative;
+            width: 100%;
+            h1 {
+                position: absolute;
+                .base {
+                    color: @color-white;
+                    font-size: 100px;
+                    line-height: 80px;
+                    letter-spacing: -2px;
+                    font-family: @font-family__marker;
+                }
+            }
+            .image-banner img{
+                min-height: 360px;
+            }
+            > p {
+                position: absolute;
+                color: @color-white;
+                height: 46px;
+                font-size: 18px;
+                line-height: 28px;
+                letter-spacing: 0.5px;
+            }
+        }
+        .columns {
+            box-sizing: content-box;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 1280px;
+            padding-left: 20px;
+            padding-right: 20px;
+            width: auto;
+        }
+    }
+}
+/*---------Min l---------------*/
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l){
+    .page-main {
+        .page-title-wrapper {
+            h1 {
+                left: 11.2%;
+                bottom: 26%;
+            }
+            .image-banner {
+                min-height: 100%;
+            }
+            > p {
+                left: 11.2%;
+                bottom: 15.5%;
+            }
+        }
+    }
+}
+/*---------Min m---------------*/
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m){
+    .page-main {
+        max-width: 100%;
+        padding: 0px;
+        box-sizing: unset;
+        margin: 0 auto;
+        .page-title-wrapper {
+            h1 {
+                position: absolute;
+                left: 2.5%;
+                bottom: 29%;
+            }
+            .image-banner img{
+                min-height: 360px;
+            }
+            > p {
+                position: absolute;
+                left: 2.5%;
+                bottom: 11.5%;
+                width: 420px;
+            }
+        }
+
+    }
+}
+/*---------Max m---------------*/
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m){
+    .page-main {
+        max-width: 100%;
+        padding: 0px;
+        box-sizing: unset;
+        margin: 0 auto;
+        .page-title-wrapper {
+            h1 {
+                left: 2.5%;
+                bottom: 29%;
+            }
+            > p {
+                left: 2.5%;
+                bottom: 11.5%;
+                color: @color-white;
+                width: 420px;
+            }
+        }
+    }
+}
+/*---------Max xs---------------*/
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__xs){
+    .page-main {
+        .page-title-wrapper {
+            h1 {
+                bottom: 45%;
+            }
+            > p {
+                bottom: 25.5%;
+                width: 300px;
+            }
+        }
+    }
+
+}
+
+/*-------------------------List-Icons-Category---------------------*/
+& when (@media-common = true){
+    .list-icons-category {
+        border-bottom: 1px solid @color-gray-light0;
+    }
+}
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l){
+    .list-icons-category {
+        .icons {
+            padding: 30px;
+            padding-bottom: 45px;
+            p {
+                margin-bottom: 2px;
+            }
+        }
+    }
+}
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m){
+    .list-icons-category {
+        display: flex;
+        justify-content: center;
+        .icons {
+            padding: 24px 30px 35px 30px;
+            p {
+                margin-bottom: 2px;
+            }
+        }
+    }
+}
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m){
+    .list-icons-category {
+        display: flex;
+        justify-content: center;
+        .icons {
+            padding: 24px 30px;
+            p {
+                margin-bottom: 2px;
+            }
+        }
+    }
+}
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__xs){
+    .list-icons-category {
+        display: flex;
+        justify-content: center;
+        .icons {
+            padding: 20px;
+            p {
+                img {
+                    min-height: 42px;
+                }
+            }
+        }
+    }
+}
+
+/*----------------------------List-Product-----------------------*/
+& when (@media-common = true){
+}
