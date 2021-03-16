@@ -1,11 +1,30 @@
 & when (@media-common = true) {
+  .new-raww {
+    width: 54px;
+    height: 30px;
+    background-color: #31241b;
+    font-size: 12px;
+    line-height: 30px;
+    color: #ffffff;
+    font-weight: 800;
+    .lib-css(font-family,@font-family-name__avenir-black);
+    text-align: center;
+    display: inline-block
+  }
+  .product-info-main{
+      text-align:center ;
+  }
+  .fieldset > .field.qty{
+      margin: 0;
+  }
 }
 
-.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
-    .product.data.items > .item.title{
-        margin: -15px -1px 0 0;
-      }
+.media-width(@extremum, @break)
+  when
+  (@extremum = "min")
+  and
+  (@break = @screen__m) {
+  .product.data.items > .item.title {
+    margin: -15px -1px 0 0;
+  }
 }
-
-
-

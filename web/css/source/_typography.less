@@ -40,8 +40,6 @@
         @font-style: normal,
         @font-display: swap
     );
-
-
     .lib-font-face(
         @family-name: @font-family-name__avenir-black,
         @font-path: '@{baseDir}fonts/Avenir-Black',
@@ -63,34 +61,36 @@
         @font-display: swap
     );
 
+    .lib-font-face(
+        @family-name: @font-family-name__la-brands,
+        @font-path: '@{baseDir}fonts/la-brands-400',
+        @font-weight: 400,
+        @font-style: normal,
+        @font-display: swap
+    );
+
+    .lib-font-face(
+        @family-name: @font-family-name__la-regular,
+        @font-path: '@{baseDir}fonts/la-regular-400',
+        @font-weight: 400,
+        @font-style: normal,
+        @font-display: swap
+    );
+
+    .lib-font-face(
+        @family-name: @font-family-name__la-solid,
+        @font-path: '@{baseDir}fonts/la-solid-900',
+        @font-weight: 900,
+        @font-style: normal,
+        @font-display: swap
+    );
+
 
 
 }
 
-//
-//  Desktop
-//  _____________________________________________
-
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
-    // .product.data.items > .item.title > a.switch {
-    //     font-weight: 800;
-    //     text-transform: uppercase;
-    //     font-size: 14px;
-    //     letter-spacing: 1px;
-    //     color: #30241a;
-    //     letter-spacing: 1px;
-    //     line-height: 63px;
-    //   }
-    //   .product.data.items > .item.title:not(.disabled) > .switch:hover {
-    //     border-bottom: 2px solid #e9d5d2;
-    //   }
-    //   .product.data.items > .active.item.title:not(.disabled) > .switch:hover {
-    //     border-bottom: none;
-    //   }
-    //   .product.data.items > .item.title > a.switch {
-    //     height: 55px;
-    //     padding: 1px 25px 1px 25px;
-    //   }
+
       .product.data.items{
         > .item.title{
             > a.switch{
@@ -112,7 +112,7 @@
         }
         > .active.item.title:not(.disabled){
             > .switch:hover{
-                border-bottom: 2px solid #e9d5d2;
+                border-bottom: none;
             }
         }
 
@@ -132,7 +132,6 @@
 
     h1 {
          letter-spacing: @h1__letter-spacing;
-         color: red;
 
      }
 

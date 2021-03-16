@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page layout="1column" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+
+    <body>
+        <move element="page.main.title" destination="product.info.main"  after="attribute.new" />
+        <referenceBlock name="reviews.tab" remove="true"/>
+        <referenceContainer name="product.info.main">
+            <container name="attribute.new" htmlTag="div" htmlClass="attribute-new" before="-" >
+                <block class="Magento\Catalog\Block\Product\View\Description" name="new.attribute" template="Magento_Catalog::product/view/attributenew.phtml" before="-"  />
+            </container>
+        </referenceContainer>
+        <referenceBlock name="product.info.details">
+            <block class="Magento\Catalog\Block\Product\View" name="faq-tab" template="Magento_Catalog::product/view/faq.phtml" group="detailed_info">
+               <arguments>
+                   <argument translate="true" name="title" xsi:type="string">FAQ</argument>
+                    <argument name="priority" xsi:type="string">1</argument>
+               </arguments>
+           </block>
+           <block class="Magento\Catalog\Block\Product\View" name="howto-tab" template="Magento_Catalog::product/view/howto.phtml" group="detailed_info">
+            <arguments>
+                <argument translate="true" name="title" xsi:type="string">HOW TO</argument>
+                 <argument name="priority" xsi:type="string">2</argument>
+            </arguments>
+        </block>
+        <block class="Magento\Catalog\Block\Product\View" name="ingredients-tab" template="Magento_Catalog::product/view/ingredients.phtml" group="detailed_info">
+            <arguments>
+                <argument translate="true" name="title" xsi:type="string">Ingredients</argument>
+                 <argument name="priority" xsi:type="string">3</argument>
+            </arguments>
+        </block>
+       </referenceBlock>
+    </body>
+</page>
