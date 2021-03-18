@@ -63,47 +63,23 @@ $_helper = $this->helper(Magento\Catalog\Helper\Output::class);
                             ?>
                             <a href="<?= $block->escapeUrl($_product->getProductUrl()) ?>" class="product photo product-item-photo" tabindex="-1">
                                 <?= $productImage->toHtml() ?>
-                            </a>
-                            <?php
-                            $saleOrPreOrder = $_product->getResource()->getAttribute('sale_or_pre_order');
-                            if ($saleOrPreOrder) {
-                                $class = "";
-                                $saleOrPreOrder = $saleOrPreOrder->getFrontend()->getValue($_product);
-                                if ($saleOrPreOrder === 'Sale') {
-                                    $class = 'sale-label';
-                                } else if (
-                                    $saleOrPreOrder === 'Pre Order'
-                                ) {
-                                    $class = 'pre-order-label';
-                                }
-                                echo "<div class=$class>" . $saleOrPreOrder . "</div>";
-                            }
-                            ?>
-                            <div class="additional_attr">
                                 <?php
-                                $brand_attribute = $_product->getResource()->getAttribute('brand');
-                                if ($brand_attribute) {
-                                    $brand_attribute = $brand_attribute->getFrontend()->getValue($_product);
-                                    if (empty($brand_attribute)) {
-                                        echo "<img />";
-                                    } else {
-                                        $encode = htmlspecialchars($brand_attribute);
-                                        // $encode = explode('&quot', $encode);
-                                        $encode = explode('&quot', $encode)[1];
-                                        $encode = explode('quot;', $encode)[1];
-                                        $encode = explode('&', $encode)[0];
-                                        $srcImg = $block->getBaseUrl() . '/pub/media/' . $encode;
-                                        echo "<img src=$srcImg alt='brand' />";
+                                $saleOrPreOrder = $_product->getResource()->getAttribute('raww_new');
+                                if ($saleOrPreOrder) {
+                                    $class = "";
+                                    $saleOrPreOrder = $saleOrPreOrder->getFrontend()->getValue($_product);
+                                    if ($saleOrPreOrder === 'New') {
+                                        $class = 'new-label';
+                                    } else if (
+                                        $saleOrPreOrder === 'New Shade'
+                                    ) {
+                                        $class = 'new-shade-label';
                                     }
-                                }
-                                $colorAttr = $_product->getResource()->getAttribute('colours_infor');
-                                if ($colorAttr) {
-                                    $colorValue = $colorAttr->getFrontend()->getValue($_product);
-                                    echo "<p>"
-                                        . $colorValue . "</p>";
+                                    echo "<div class=$class>" . $saleOrPreOrder . "</div>";
                                 }
                                 ?>
-                            </div>
+                            </a>
+
                             <div class="product details product-item-details">
                                 <?php
                                 $_productNameStripped = $block->stripTags($_product->getName(), null, true);
