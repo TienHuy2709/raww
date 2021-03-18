@@ -1,0 +1,53 @@
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .footer-top {
+        display: inline-block;
+        width: 100%;
+        border-bottom: solid 1px #eee;
+        text-align: center;
+        ul{
+            display: inline-block;
+    width: 100%;
+    max-width: 1280px;
+    margin-bottom: 32px;
+    margin-top: 51px;
+    padding-left: 48px;
+            li {
+                width: auto;
+                float: left;
+                margin-right: 120px;
+                list-style-type: none;
+                a {
+                    text-transform: uppercase;
+                    font-family: @font-family__avenir-black;
+                    font-size: 14px;
+                    line-height: 15px;
+                    color: @theme__color__primary-alt;
+                    img {
+                        display: inline-block;
+                        margin-right: 14px;
+                        position: relative;
+                        top: 9px;
+                        height: 30px;
+                        width: auto;
+                    }
+                }
+            }
+        }
+    }
+    .footer-center {
+        max-width: 1280px;
+        padding: 0px 20px;
+        margin: auto;
+        width: 100%;
+        display: block;
+        .item {
+            display: inline-block;
+            float: left;
+            ul {
+                li {
+                    list-style-type: none;
+                }
+            }
+        }
+    }
+}
