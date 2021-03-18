@@ -53,8 +53,8 @@
                 <height>78</height>
             </image>
             <image id="new_products_content_widget_grid" type="small_image">
-                <width>240</width>
-                <height>300</height>
+                <width>400</width>
+                <height>400</height>
             </image>
             <image id="new_products_content_widget_list" type="small_image">
                 <width>270</width>
@@ -78,8 +78,8 @@
                 <height>700</height>
             </image>
             <image id="product_page_image_small" type="thumbnail">
-                <width>90</width>
-                <height>90</height>
+                <width>120</width>
+                <height>120</height>
             </image>
             <image id="product_swatch_image_large" type="image"/>
             <image id="product_swatch_image_medium" type="image">

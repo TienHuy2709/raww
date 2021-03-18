@@ -1,7 +1,15 @@
 <script>
     require([
         'jquery',
-        'tabs'], function ($) {
+        'tabs',
+        'slick'
+    ], function($) {
         $("#element").tabs();
+        $('.product-items').slick({
+            infinite: false,
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            arrows:true,
+        });
     });
 </script>

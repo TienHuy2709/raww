@@ -9,11 +9,28 @@
 
     <body>
         <move element="page.main.title" destination="product.info.main"  after="attribute.new" />
+        <move element="product.info.details" destination="main.top"  after="product.info.media" />
+        <move element="product.info.main" destination="main.top"  before="-" />
+        <move element="product.info.media" destination="main.top"  after="product.info.main" />
         <referenceBlock name="reviews.tab" remove="true"/>
+        <referenceBlock name="product.info.sku" remove="true" />
+        <referenceBlock name="product.info.stock.sku" remove="true"/>
+        <referenceBlock name="catalog.compare.sidebar" remove="true"/>
+        <referenceBlock name="wishlist_sidebar" remove="true" />
+        <!-- <referenceBlock name="product.info.review" remove="true" /> -->
+        <referenceBlock name="sidebar.main" remove="true" />
+        <!-- <referenceBlock name="product.review.form" remove="true" /> -->
         <referenceContainer name="product.info.main">
             <container name="attribute.new" htmlTag="div" htmlClass="attribute-new" before="-" >
                 <block class="Magento\Catalog\Block\Product\View\Description" name="new.attribute" template="Magento_Catalog::product/view/attributenew.phtml" before="-"  />
             </container>
+            <container name="container.category.smells" htmlTag="div" htmlClass="container-category-smells" after="-" >
+            <block class="Magento\Cms\Block\Block" name="category.smells">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">category-naturally-smells</argument>
+                </arguments>
+            </block>
+        </container>
         </referenceContainer>
         <referenceBlock name="product.info.details">
             <block class="Magento\Catalog\Block\Product\View" name="faq-tab" template="Magento_Catalog::product/view/faq.phtml" group="detailed_info">
@@ -35,5 +52,13 @@
             </arguments>
         </block>
        </referenceBlock>
+       <referenceContainer name="page.wrapper">
+        <container name="main.top" htmlTag="div" htmlClass="main-top">
+        </container>
+            <container name="container.brgcategory" htmlTag="div" htmlClass="container-bgrcategory">
+                <block class="Magento\Framework\View\Element\Template" name="banner.bottom" template="Magento_Catalog::banner_bottom.phtml"/>
+            </container>
+        </referenceContainer>
+        <move element="main.content" destination="page.wrapper"  before="footer-container" />
     </body>
 </page>

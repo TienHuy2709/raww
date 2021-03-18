@@ -1,8 +1,7 @@
 var config = {
     paths: {
         'accordion': "js/accordion",
-        'slick': "js/slick/slick"
-
+        'slick': "js/slick"
     },
     shim: {
         'accordion': {
