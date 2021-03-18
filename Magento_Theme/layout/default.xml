@@ -18,7 +18,10 @@
     </referenceContainer>
    <referenceContainer name="page.top">
         <block class="Magento\Framework\View\Element\Template" name="header_bottom" after="navigation.sections" template="Magento_Theme::html/header_bottom.phtml" />
+    </referenceContainer>    
+    <referenceContainer name="footer-container">
+        <block class="Magento\Framework\View\Element\Template" name="footer_top" before="-" template="Magento_Theme::html/footer_top.phtml" />
+        <block class="Magento\Framework\View\Element\Template" name="footer_center" after="footer_top" template="Magento_Theme::html/footer_center.phtml" />
     </referenceContainer>
-
     </body>
 </page>
