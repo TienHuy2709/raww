@@ -1,0 +1,319 @@
+& when (@media-common = true) {
+    .banner-home {
+        position: relative;
+        .banner-text {
+            position: absolute;
+            h2 {
+                font-family: @font-family__marker;
+                color: @color-white;
+                line-height: 80px;
+                letter-spacing: -3px;
+                word-spacing: 1px;
+            }
+            p {
+                font-size: 18px;
+                color: @color-white;
+                line-height: 28px;
+                word-spacing: -2.5px;
+            }
+            a {
+                font-family: @font-family__avenir-black;
+                color: @theme__color__primary;
+                font-size: 16px;
+                line-height: 20px;
+                background-color: @color-white;
+                padding: 17px 28px 17px 32px;
+                border-radius: 3px;
+                word-spacing: -2px;
+            }
+        }
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .banner-home {
+        .banner-img {
+            width: auto;
+        }
+        .banner-img-mobile {
+            display: none;
+        }
+        .banner-text {
+            top: 10%;
+            left: 11.2%;
+            h2 {
+                font-size: 100px;
+                padding-right: 25%;
+                margin-bottom: 20px;
+            }
+            p {
+                padding-right: 35%;
+                margin-bottom: 20px;
+            }
+            a {  
+                padding: 17px 28px 17px 32px;
+            }
+        }
+    }
+    .home-block-1 {
+        position: relative;
+        margin-top: -6px;
+        margin-bottom: 5.7%;
+        .home-content-top {
+            max-width: 1280px;
+            padding-left: 20px;
+            padding-right: 20px;
+            box-sizing: border-box;            
+            display: flex;
+            position: absolute;
+            top: 0;
+            margin-left: 10%;
+            margin-right: 10%;
+            margin-top: 7%;
+            .content-top {
+                max-width: 400px;
+                max-height: 400px;
+                justify-content: center;
+                position: relative;
+                img {
+                    width: 100%;
+                    transform: scale(1.08);
+                     
+                }
+                &:first-child {
+                    margin-left: 0px;
+                }
+                &:last-child {
+                    margin-right: 0px;
+                }
+                &:nth-child(2) {
+                    margin: 0px 20px;
+                }
+                a{
+                    font-family: @font-family__marker;
+                    font-size: 40px;
+                    letter-spacing: -1.3px;
+                    line-height: 74px;
+                    position: absolute;
+                    z-index: 2;
+                    bottom: 7%;
+                    left: 10%;
+                    color: @color-white;
+                }
+            }
+        }
+    }
+    .home-block-2 {
+        text-align: center;
+        .block-superfood {
+            max-width: 1280px;
+            margin: auto;
+            padding: 0px 20px;
+            .superfood-title {
+                margin-bottom: 50px;
+                h2 {
+                    font-size: 42px;
+                    line-height: 48px;
+                    letter-spacing: -1.5px;
+                    word-spacing: -3px;
+                    margin-left: -5px;
+                    margin-bottom: 33px;
+                }
+                p {
+                    font-size: 20px;
+                    line-height: 28px;
+                    max-width: 960px;
+                    margin: auto;
+                    word-spacing: -1px;
+                    letter-spacing: -0.4px;
+                }  
+            }
+            .superfood-content {
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                padding: 0;
+                margin-bottom: 10px;
+                .icons {
+                    width: 16.66%;
+                    margin-bottom: 25px;
+                    .icons-content {
+                        font-size: 14px;
+                        line-height: 15px;
+                        text-transform: uppercase;
+                        font-family: @font-family__avenir-black;
+                        max-width: 84px;
+                        margin:auto;
+                    }
+                    &:nth-child(n+13){
+                        display: none;
+                    }
+                }
+            }
+            .superfood-button {
+                .action.primary {
+                    .lib-button-primary (
+                        @_button-padding: 15px 29px;
+                    );
+                    
+                    
+                }
+            }
+        }
+    }
+    .home-block-3 {
+        text-align: center;
+        margin-bottom: 59px;
+        .instagram {
+            max-width: 1280px;
+            margin: auto;
+            padding: 0px 20px;
+            .instagram-title {
+                h3 {
+                    font-size: 32px;
+                    line-height: 74px;
+                    letter-spacing: -1.7px;
+                    margin-bottom: 0;
+                }
+                p {
+                    font-size: 18px;
+                    line-height: 28px;
+                    letter-spacing: -0.6px;
+                    margin-top: -15px;
+                    &::after {
+                        content: '\f16d';
+                        font-family: @font-family-name__la-brands;
+                        font-size: 23px;
+                    }
+                }
+            }
+            .instagram-image {
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                width: 100%;
+                margin-top: 25px;
+                margin-left: -8px;
+                margin-right: -10px;
+                .item {
+                    width: 25%;
+                    margin-bottom: 15px;
+                    margin-right: 5px;
+                    &:nth-child(4n) {
+                        margin-right: -19px;
+                    }
+                    &:nth-child(4n+3) {
+                        margin-left: -1px;
+                    }
+                }
+            }
+            .instagram-button {
+                margin-top: -2px;
+                .action.primary {
+                    .lib-button-primary (
+                        @_button-padding: 15px 31px;
+                    ); 
+                }
+            }
+        }
+    }
+    .home-block-4 {
+        .subcribe {
+            position: relative;
+            text-align: center;
+            .subcribe-text {
+                position: absolute;
+                top: 18.35%;
+                left: 31.6%;
+                h2 {
+                    font-size: 32px;
+                    line-height: 74px;
+                    letter-spacing: -1.65px;
+                    color: @color-white;
+                    margin-bottom: 0;
+                    
+                }
+                p {
+                    font-size: 18px;
+                    line-height: 26px;
+                    color: @color-white;
+                    padding-right: 10.5%;
+                    padding-left: 10.5%;
+                    word-spacing: -1px;
+                }
+            }
+        }
+    }
+    .block.newsletter {
+        position: relative;
+        z-index: 1;
+        width: auto;
+        .form.subscribe {
+            position: absolute;
+        }
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l) {
+    .banner-home {
+        .banner-text {
+            top: 21%;
+            h2 {
+                padding-right: 40%;
+                margin-bottom: 31px;
+            }
+            p {
+                
+                padding-right: 47%;
+                margin-bottom: 39px;
+            }
+        }
+    }
+    .home-block-1 {
+        .home-content-top {
+            .content-top {
+                a {
+                    font-size: 64px;
+                }
+            }
+        }
+    }
+    .home-block-2 {
+        .block-superfood {
+            .superfood-content {
+                padding-left: 5.2%;
+                padding-right: 5.2%;
+                .icons {
+                    width: 12.5%;
+                    &:nth-child(n+13) {
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+        
+    }  
+}
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+    .banner-home {
+        .banner-img {
+            display: none;
+        }
+        .banner-img-mobile {
+
+        }
+        .banner-text {
+            bottom: 0;
+            h2 {
+                font-size: 54px;
+            }
+            p {
+                display: none;
+            }
+        }
+    }
+    .home-block-1 {
+        display: none;
+    }
+}
