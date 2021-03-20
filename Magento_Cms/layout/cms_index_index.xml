@@ -7,15 +7,13 @@
 -->
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
-       
-        
-         <referenceContainer name="main.content">
+        <move element="form.subscribe" destination="main.content" after="home_block_3"/>
+        <referenceContainer name="main.content">
             <block class="Magento\Framework\View\Element\Template" name="banner_home" before="-" template="Magento_Cms::banner_home.phtml" />
             <block class="Magento\Framework\View\Element\Template" name="home_block_1" after="banner_home" template="Magento_Cms::home_block_1.phtml" />
             <block class="Magento\Framework\View\Element\Template" name="block_superfood" after="home_block_1" template="Magento_Cms::block_superfood.phtml" />
             <block class="Magento\Framework\View\Element\Template" name="home_block_3" after="block_superfood" template="Magento_Cms::home_block_3.phtml" />
             <block class="Magento\Framework\View\Element\Template" name="home_block_4" after="home_block_3" template="Magento_Cms::home_block_4.phtml" />
         </referenceContainer>
-        <move element="form.subscribe" destination="home_block_1"/>
     </body>
 </page>
