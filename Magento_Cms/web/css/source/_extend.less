@@ -19,7 +19,7 @@
                 font-size: 16px;
                 line-height: 20px;
                 background-color: @color-white;
-                padding: 17px 28px 17px 32px;
+                
                 border-radius: 3px;
                 word-spacing: -2px;
             }
@@ -28,7 +28,7 @@
     .home-block-2 {
         text-align: center;
         .block-superfood {
-            padding: 0px 20px;
+            
             .superfood-content {
                 display: flex;
                 justify-content: center;
@@ -51,7 +51,7 @@
         text-align: center;
         .instagram {
             margin: auto;
-            padding: 0px 20px;
+            
             .instagram-title {
                 p {
                     &::after {
@@ -65,6 +65,49 @@
                 justify-content: center;
                 flex-wrap: wrap;
                 width: 100%;
+            }
+        }
+    }
+    .home-block-4 {
+        .subcribe {
+            position: relative;
+            text-align: center;
+            .subcribe-text {
+                position: absolute;
+                h2 {
+                    color: @color-white;
+                    
+                }
+                p {
+                    color: @color-white;
+                    line-height: 26px;
+                }
+            }
+        }
+    }
+    .block.newsletter {
+        
+        .field {
+            .control::before {
+                display: none;
+            }
+        }
+        .form.subscribe {
+            
+        }
+        input { 
+            margin-right: 0;
+            font-size: 16px;
+            line-height: 20px;
+            font-family: @font-family__avenir-roman;
+        }
+        .actions {
+            position: absolute;
+            span {
+                display: block;
+                font-size: 15px;
+                line-height: 20px;
+                font-family: @font-family__avenir-heavy;
             }
         }
     }
@@ -148,6 +191,7 @@
     }
     .home-block-2 {
         .block-superfood {
+            padding: 0px 20px;
             max-width: 1280px;
             margin: auto;
             .superfood-title {
@@ -159,6 +203,7 @@
                     word-spacing: -3px;
                     margin-left: -5px;
                     margin-bottom: 33px;
+                    padding: 0% 22%;
                 }
                 p {
                     font-size: 20px;
@@ -194,6 +239,7 @@
         margin-bottom: 59px;
         .instagram {
             max-width: 1280px;
+            padding: 0px 20px;
             .instagram-title {
                 h3 {
                     font-size: 32px;
@@ -242,28 +288,22 @@
         }
     }
     .home-block-4 {
-        .subcribe {
-            position: relative;
-            text-align: center;
-            .subcribe-text {
-                position: absolute;
-                top: 18.35%;
-                left: 33.08%;
-                
+        .subcribe {           
+            .subcribe-text {              
+                top: -12%;
+                left: 20%;
                 h2 {
                     font-size: 32px;
                     line-height: 74px;
                     letter-spacing: -2px;
-                    color: @color-white;
                     margin-bottom: 0;
                     word-spacing: 2.5px;
                     padding-right: 3.85%;
-                    
                 }
                 p {
                     font-size: 18px;
-                    line-height: 26px;
-                    color: @color-white;
+                    
+                    
                     padding-right: 10.5%;
                     padding-left: 10.5%;
                     word-spacing: -1px;
@@ -272,43 +312,34 @@
                 }
             }
         }
+        .subcribe-image-mobile {
+            display: none;
+        }
     }
     .block.newsletter {
         position: relative;
         z-index: 1;
-        max-width: 26.3%;
         width: auto;
-        .field {
-            .control::before {
-                display: none;
-            }
-        }
+        max-width: 30%;
         .form.subscribe {
             position: absolute;
-            margin-top: 55.8%;
-            left: 122.5%;
+            margin-top: 52%;
+            left: 100%;
         }
         input {
-            margin-right: 0;
+            
             padding: 24px 19px;
-            font-size: 16px;
-            line-height: 20px;
-            font-family: @font-family__avenir-roman;
             letter-spacing: -0.65px;
             // .lib-form-element-input (
             //     @_padding: @input-text__padding;
             // );
         }
         .actions {
-            position: absolute;
             top: 0;
             right: -3.6%;
             span {
                 padding: 8px 18px 7px 17px;
-                display: block;
-                font-size: 15px;
-                line-height: 20px;
-                font-family: @font-family__avenir-heavy;
+               
             }
         }
     }
@@ -351,6 +382,21 @@
                 }
             }
         }    
+    }
+    .home-block-4 {
+        .subcribe {
+            .subcribe-text {
+                top: 8%;
+                left: 26%;
+            }
+        }
+    }
+    .block.newsletter {
+        max-width: 25.3%;
+        .form.subscribe {
+            left: 123%;
+            margin-top: 62%;
+        }
     }  
     
 }
@@ -367,7 +413,6 @@
     .block.newsletter {
         max-width: 26.3%;
         .form.subscribe {
-            position: absolute;
             margin-top: 55.8%;
             left: 122.5%;
         }
@@ -377,25 +422,30 @@
     .banner-home {
         margin-top: -13px;
         .banner-img {
-            
-        }
-        .banner-img-mobile {
             display: none;
         }
+        .banner-img-mobile {
+            img {
+                width: 767px;
+                height: 380px;
+                object-fit: cover;
+            }
+        }
         .banner-text {
-            bottom: 18%;
-            left: 7%;
+            bottom: 9.6%;
+            left: 7.6%;
             h2 {
                 font-size: 54px;
                 line-height: 44px;
                 letter-spacing: -1.5px;
-                margin-bottom: 10px;
             }
             p {
                 display: none;
             }
             a {
-                margin-top: 20px;
+                margin-top: 5px;
+                display: inline-block;
+                padding: 14px 30px;
             }
         }
     }
@@ -405,18 +455,25 @@
     .home-block-2 {
         .block-superfood {
             .superfood-title {
+                padding: 0px 20px;
                 h2 {
                     font-size: 24px;
-                    list-style: 28px;
+                    line-height: 28px;
+                    padding: 6px 40px 0px 25px;
+                    letter-spacing: -1px;
                 }
                 p {
-                    font-size: 16px;
+                    font-size: 15px;
                     line-height: 24px;
+                    margin-top: -3px;
+                    padding-right: 3px;
                 }
             }
             .superfood-content {
+                margin: 24.3px 1px 0px 1px;
                 .icons {
                     width: 20%;
+                    margin-bottom: 25.2px;
                     .icons-image {
                         img {
                             max-width: 90px;
@@ -428,6 +485,14 @@
                     }
                 }
             }
+            .superfood-button {
+                .action.primary {
+                    .lib-button-primary (
+                        //@_button-padding: 3.7% 29.2%,
+                        @_button-padding: 14px 111px;
+                    );
+                }
+            }
         }
     }
     .home-block-3 {
@@ -435,15 +500,24 @@
             .instagram-title {
                 h3 {
                     font-size: 24px;
-                    line-height: 30px;
+                    line-height: 28px;
+                    letter-spacing: -1px;
+                    margin-bottom: 11px;
                 }
                 p {
-                    font-size: 16px;
-                    line-height: 24px;
+                    padding-left: 19px;
+                    padding-right: 20px;
+                    font-size: 15px;
+                    line-height: 21px;
+                    &::after {
+                        font-size: 20px;
+                    }
                 }
             }
             .instagram-image {
+                margin-top: 26px;
                 .item {
+                    margin-bottom: 6px;
                     //width: 33.3%;
                     img {
                         max-height: 190px;
@@ -453,6 +527,63 @@
                         display: none;
                     }
                 }
+            }
+            .instagram-button {
+                margin-top: 8px;
+                .action.primary {
+                    .lib-button-primary (
+                        @_button-padding: 14px 141px;
+                    );
+                }
+            }
+        }
+    }
+    .home-block-4 {
+        text-align: center;
+        .subcribe {
+            .subcribe-text {
+                top: 4%;
+                h2 {
+                    font-size: 24px;
+                    line-height: 28px;
+                    letter-spacing: -1px;
+                    padding-right: 3px;
+                    margin-bottom: 8px;
+                }
+                p {
+                    font-size: 15px;
+                    padding-right: 5px;
+                }
+            }
+            .subcribe-image {
+                display: none;
+            }
+            .subcribe-image-mobile {
+                img {
+                    height: 291px;
+                    width: 767px;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+    .block.newsletter {
+        position: relative;
+        padding-left: 10px;
+        z-index: 1;
+        .form.subscribe {
+            position: absolute;
+            width: 95%;
+            margin-top: 42%;
+        }
+        input {
+            padding: 25px 19px;
+            letter-spacing: -0.6px;
+        }
+        .actions {
+            margin-top: 9px;
+            .action.primary {
+                padding: 14.5px 143px;
             }
         }
     }
@@ -475,12 +606,29 @@
 }
 
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__xs) {
-    .banner-home {
-        .banner-img {
-            display: none;
+    .home-block-2 {
+        .block-superfood {
+            .superfood-content {
+                .icons {
+                    width: 33.3%;
+                    &:nth-child(n+7){
+                        display: none;
+                    }
+                }
+            }
         }
-        .banner-img-mobile {
-            display: block;
+    }
+    .home-block-3 {
+        .instagram {
+            .instagram-image {
+                padding: 0px 3px;
+                .item {
+                    width: 50%;
+                    &:nth-child(n+5) {
+                        display: none;
+                    }
+                }
+            }
         }
     }
 }
