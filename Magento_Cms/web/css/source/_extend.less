@@ -19,16 +19,15 @@
                 font-size: 16px;
                 line-height: 20px;
                 background-color: @color-white;
-                
                 border-radius: 3px;
                 word-spacing: -2px;
+                text-decoration: none;
             }
         }
     }
     .home-block-2 {
         text-align: center;
-        .block-superfood {
-            
+        .block-superfood {  
             .superfood-content {
                 display: flex;
                 justify-content: center;
@@ -51,7 +50,6 @@
         text-align: center;
         .instagram {
             margin: auto;
-            
             .instagram-title {
                 p {
                     &::after {
@@ -65,6 +63,11 @@
                 justify-content: center;
                 flex-wrap: wrap;
                 width: 100%;
+                .item {
+                    img {
+                        cursor: pointer;
+                    }
+                }
             }
         }
     }
@@ -76,7 +79,6 @@
                 position: absolute;
                 h2 {
                     color: @color-white;
-                    
                 }
                 p {
                     color: @color-white;
@@ -86,14 +88,10 @@
         }
     }
     .block.newsletter {
-        
         .field {
             .control::before {
                 display: none;
             }
-        }
-        .form.subscribe {
-            
         }
         input { 
             margin-right: 0;
@@ -164,7 +162,7 @@
                 img {
                     width: 100%;
                     transform: scale(1.08);
-                     
+                    cursor: pointer;   
                 }
                 &:first-child {
                     margin-left: 0px;
@@ -185,6 +183,7 @@
                     bottom: 7%;
                     left: 10%;
                     color: @color-white;
+                    text-decoration: none;
                 }
             }
         }
@@ -228,9 +227,7 @@
                 .action.primary {
                     .lib-button-primary (
                         @_button-padding: 15px 29px;
-                    );
-                    
-                    
+                    );  
                 }
             }
         }
@@ -302,8 +299,6 @@
                 }
                 p {
                     font-size: 18px;
-                    
-                    
                     padding-right: 10.5%;
                     padding-left: 10.5%;
                     word-spacing: -1px;
@@ -327,7 +322,6 @@
             left: 100%;
         }
         input {
-            
             padding: 24px 19px;
             letter-spacing: -0.65px;
             // .lib-form-element-input (
@@ -339,7 +333,6 @@
             right: -3.6%;
             span {
                 padding: 8px 18px 7px 17px;
-               
             }
         }
     }
@@ -354,7 +347,6 @@
                 margin-bottom: 31px;
             }
             p {
-                
                 padding-right: 47%;
                 margin-bottom: 39px;
             }
@@ -397,8 +389,7 @@
             left: 123%;
             margin-top: 62%;
         }
-    }  
-    
+    }    
 }
 
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__xl) {
@@ -488,8 +479,8 @@
             .superfood-button {
                 .action.primary {
                     .lib-button-primary (
-                        //@_button-padding: 3.7% 29.2%,
-                        @_button-padding: 14px 111px;
+                        @_button-padding: 14px 0px;
+                        @_button-width: 95%;
                     );
                 }
             }
@@ -516,13 +507,11 @@
             }
             .instagram-image {
                 margin-top: 26px;
+                padding-left: 10px;
                 .item {
                     margin-bottom: 6px;
-                    //width: 33.3%;
-                    img {
-                        max-height: 190px;
-                        max-width: 190px;
-                    }
+                    width: 33.33%;
+                    padding-right: 10px;
                     &:nth-child(n+7) {
                         display: none;
                     }
@@ -532,7 +521,8 @@
                 margin-top: 8px;
                 .action.primary {
                     .lib-button-primary (
-                        @_button-padding: 14px 141px;
+                        @_button-padding: 14px 0px;
+                        @_button-width: 98%;
                     );
                 }
             }
@@ -542,6 +532,7 @@
         text-align: center;
         .subcribe {
             .subcribe-text {
+                left: 18%;
                 top: 4%;
                 h2 {
                     font-size: 24px;
@@ -573,17 +564,20 @@
         z-index: 1;
         .form.subscribe {
             position: absolute;
-            width: 95%;
-            margin-top: 42%;
+            width: 98%;
+            margin-top: 20%;
         }
         input {
             padding: 25px 19px;
             letter-spacing: -0.6px;
         }
         .actions {
+            width: 100%;
             margin-top: 9px;
             .action.primary {
-                padding: 14.5px 143px;
+                padding-top: 14.5px;
+                padding-bottom: 13px;
+                width: 100%;
             }
         }
     }
@@ -592,14 +586,26 @@
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__s) { 
     .home-block-3 {
         .instagram {
-            .instagram-image {
-                .item {
-                    img {
-                        max-height: 175px;
-                        max-width: 175px;
-                    }
-                    
+            .instagram-button {
+                .action.primary {
+                    .lib-button-primary (
+                        @_button-padding: 14px 0px;
+                        @_button-width: 97%;
+                    );
                 }
+            }
+        }
+    }
+    .block.newsletter {
+        .form.subscribe {
+            width: 97%;
+            margin-top: 30%;
+        }
+    }
+    .home-block-4 {
+        .subcribe {
+            .subcribe-text {
+                left: 9%;
             }
         }
     }
@@ -621,14 +627,59 @@
     .home-block-3 {
         .instagram {
             .instagram-image {
-                padding: 0px 3px;
                 .item {
                     width: 50%;
+                    img {
+                        max-height: 175px;
+                        max-width: 175px;
+                    }
                     &:nth-child(n+5) {
                         display: none;
                     }
                 }
             }
+            .instagram-button {
+                .action.primary {
+                    .lib-button-primary (
+                        @_button-padding: 14px 0px;
+                        @_button-width: 95%;
+
+                    );
+                }
+            }
+        }
+    }
+    .home-block-4 {
+        .subcribe {
+            .subcribe-text {
+                left: 0;
+            }
+        }
+    }
+    .block.newsletter {
+        .form.subscribe {
+            width: 95%;
+            margin-top: 42%;
+        }
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__380) {
+    .home-block-3 {
+        .instagram {
+            .instagram-image {
+                .item{
+                    img {
+                        max-height: 150px;
+                        max-width: 150px;
+                    }
+                }
+            }
+        }
+    }
+    .block.newsletter {
+        .form.subscribe {
+            margin-top: 46%;
         }
     }
 }
