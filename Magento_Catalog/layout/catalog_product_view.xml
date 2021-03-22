@@ -36,7 +36,7 @@
             <block class="Magento\Catalog\Block\Product\View" name="faq-tab" template="Magento_Catalog::product/view/faq.phtml" group="detailed_info">
                <arguments>
                    <argument translate="true" name="title" xsi:type="string">FAQ</argument>
-                    <argument name="priority" xsi:type="string">1</argument>
+                    <argument name="priority" xsi:type="string">4</argument>
                </arguments>
            </block>
            <block class="Magento\Catalog\Block\Product\View" name="howto-tab" template="Magento_Catalog::product/view/howto.phtml" group="detailed_info">
@@ -53,6 +53,7 @@
         </block>
        </referenceBlock>
        <referenceContainer name="page.wrapper">
+        <block class="Magento\Framework\View\Element\Template" name="addjs" template="Magento_Catalog::addjs.phtml"/>
         <container name="main.top" htmlTag="div" htmlClass="main-top">
         </container>
             <container name="container.brgcategory" htmlTag="div" htmlClass="container-bgrcategory">
@@ -60,5 +61,10 @@
             </container>
         </referenceContainer>
         <move element="main.content" destination="page.wrapper"  before="footer-container" />
+        <referenceContainer name="content">
+            <container name="container.title.product.list" htmlTag="div" htmlClass="container-title-product-list">
+                <block class="Magento\Framework\View\Element\Template" name="title.product.list" template="Magento_Catalog::title_product_list.phtml"/>
+            </container>
+        </referenceContainer>
     </body>
 </page>
