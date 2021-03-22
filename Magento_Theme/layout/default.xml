@@ -124,6 +124,7 @@
         </referenceContainer>
         <referenceContainer name="before.body.end">
             <block class="Magento\Theme\Block\Html\Footer" name="absolute_footer" template="Magento_Theme::html/absolute_footer.phtml" />
+            <block class="Magento\Framework\View\Element\Template" name="custom_js" before="-" template="Magento_Theme::custom_js.phtml" />
         </referenceContainer>
         <referenceContainer name="content">
             <block class="Magento\Framework\View\Element\FormKey" name="formkey"/>
