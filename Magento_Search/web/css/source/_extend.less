@@ -1,0 +1,40 @@
+& when (@media-common = true) {
+    
+}
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+        .block.block-search {
+            float: left;
+            position: absolute;
+            left: 39%;
+            padding: 6px 0px;
+            input {
+                border: none;
+                font-size: 14px;
+                line-height: 20px;
+                font-family: @font-family__avenir-roman;
+                color: @color-black3;
+                letter-spacing: -0.25px;            
+            }           
+            .actions {
+                position: absolute;
+                top: 6px;
+                .search {
+                    right: 0;
+                    &::before {
+                        font-size: 19px;
+                    }
+                }
+            }
+    }
+   
+}
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+    .block.block-search {
+        display: none;
+    }
+    .header-bottom {
+        display: none;
+    }
+}
