@@ -14,7 +14,7 @@
         <?php if ($block->shouldRenderQuantity()) :?>
         <div class="field qty">
             <div class="control product">
-                <button class="button-adjust" type="button">-</button>
+                <button class="button-adjust minus" type="button">-</button>
                 <input type="number"
                        name="qty"
                        id="qty"
@@ -24,7 +24,7 @@
                        class="input-text qty"
                        data-validate="<?= $block->escapeHtmlAttr(json_encode($block->getQuantityValidators())) ?>"
                        />
-                <button class="button-adjust" type="button">+</button>
+                <button class="button-adjust plus" type="button">+</button>
             </div>
         </div>
         <?php endif; ?>
