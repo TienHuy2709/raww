@@ -15,19 +15,19 @@
     <?php if ($block->getLastPageNum() > 1) :?>
         <?= $block->escapeHtml(
             __(
-                '%1 Results',
+                '%1 items found',
                 '<span class="toolbar-number">' . $block->getTotalNum() . '</span>'
             ),
             ['span']
         ) ?>
     <?php elseif ($block->getTotalNum() == 1) :?>
         <?= $block->escapeHtml(
-            __('%1 Result', '<span class="toolbar-number">' . $block->getTotalNum() . '</span>'),
+            __('%1 items found', '<span class="toolbar-number">' . $block->getTotalNum() . '</span>'),
             ['span']
         ) ?>
     <?php else :?>
         <?= $block->escapeHtml(
-            __('%1 Results', '<span class="toolbar-number">' . $block->getTotalNum() . '</span>'),
+            __('%1 items found', '<span class="toolbar-number">' . $block->getTotalNum() . '</span>'),
             ['span']
         ) ?>
     <?php endif; ?>

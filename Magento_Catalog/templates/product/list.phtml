@@ -63,47 +63,23 @@ $_helper = $this->helper(Magento\Catalog\Helper\Output::class);
                             ?>
                             <a href="<?= $block->escapeUrl($_product->getProductUrl()) ?>" class="product photo product-item-photo" tabindex="-1">
                                 <?= $productImage->toHtml() ?>
-                            </a>
-                            <?php
-                            $saleOrPreOrder = $_product->getResource()->getAttribute('sale_or_pre_order');
-                            if ($saleOrPreOrder) {
-                                $class = "";
-                                $saleOrPreOrder = $saleOrPreOrder->getFrontend()->getValue($_product);
-                                if ($saleOrPreOrder === 'Sale') {
-                                    $class = 'sale-label';
-                                } else if (
-                                    $saleOrPreOrder === 'Pre Order'
-                                ) {
-                                    $class = 'pre-order-label';
-                                }
-                                echo "<div class=$class>" . $saleOrPreOrder . "</div>";
-                            }
-                            ?>
-                            <div class="additional_attr">
                                 <?php
-                                $brand_attribute = $_product->getResource()->getAttribute('brand');
-                                if ($brand_attribute) {
-                                    $brand_attribute = $brand_attribute->getFrontend()->getValue($_product);
-                                    if (empty($brand_attribute)) {
-                                        echo "<img />";
-                                    } else {
-                                        $encode = htmlspecialchars($brand_attribute);
-                                        // $encode = explode('&quot', $encode);
-                                        $encode = explode('&quot', $encode)[1];
-                                        $encode = explode('quot;', $encode)[1];
-                                        $encode = explode('&', $encode)[0];
-                                        $srcImg = $block->getBaseUrl() . '/pub/media/' . $encode;
-                                        echo "<img src=$srcImg alt='brand' />";
+                                $saleOrPreOrder = $_product->getResource()->getAttribute('raww_new');
+                                if ($saleOrPreOrder) {
+                                    $class = "";
+                                    $saleOrPreOrder = $saleOrPreOrder->getFrontend()->getValue($_product);
+                                    if ($saleOrPreOrder === 'New') {
+                                        $class = 'new-label';
+                                    } else if (
+                                        $saleOrPreOrder === 'New Shade'
+                                    ) {
+                                        $class = 'new-shade-label';
                                     }
-                                }
-                                $colorAttr = $_product->getResource()->getAttribute('colours_infor');
-                                if ($colorAttr) {
-                                    $colorValue = $colorAttr->getFrontend()->getValue($_product);
-                                    echo "<p>"
-                                        . $colorValue . "</p>";
+                                    echo "<div class=$class>" . $saleOrPreOrder . "</div>";
                                 }
                                 ?>
-                            </div>
+                            </a>
+
                             <div class="product details product-item-details">
                                 <?php
                                 $_productNameStripped = $block->stripTags($_product->getName(), null, true);
@@ -128,8 +104,15 @@ $_helper = $this->helper(Magento\Catalog\Helper\Output::class);
                                                     <input type="hidden" name="product" value="<?= /* @noEscape */ $postParams['data']['product'] ?>">
                                                     <input type="hidden" name="<?= /* @noEscape */ Action::PARAM_NAME_URL_ENCODED ?>" value="<?= /* @noEscape */ $postParams['data'][Action::PARAM_NAME_URL_ENCODED] ?>">
                                                     <?= $block->getBlockHtml('formkey') ?>
-                                                    <button type="submit" title="<?= $block->escapeHtmlAttr(__('Add to Cart')) ?>" class="action tocart primary">
-                                                        <span><?= $block->escapeHtml(__('Add to Cart')) ?></span>
+                                                    <div class="field qty">
+                                                        <div class="control product">
+                                                            <button class="button-adjust minus" type="button">-</button>
+                                                            <input id="number" class="input-text qty" type="number" value="1" name="qty" maxlength="12" minlength="1" data-validate="null">
+                                                            <button class="button-adjust plus" type="button">+</button>
+                                                        </div>
+                                                    </div>
+                                                    <button type="submit" title="<?= $block->escapeHtmlAttr(__('Add to Bag')) ?>" class="action tocart primary">
+                                                        <span><?= $block->escapeHtml(__('Add to Bag')) ?></span>
                                                     </button>
                                                 </form>
                                             <?php else : ?>
@@ -138,11 +121,6 @@ $_helper = $this->helper(Magento\Catalog\Helper\Output::class);
                                                 <?php else : ?>
                                                     <div class="stock unavailable"><span><?= $block->escapeHtml(__('Out of stock')) ?></span></div>
                                                 <?php endif; ?>
-                                            <?php endif; ?>
-                                        </div>
-                                        <div data-role="add-to-links" class="actions-secondary" <?= strpos($pos, $viewMode . '-secondary') ? $block->escapeHtmlAttr($position) : '' ?>>
-                                            <?php if ($addToBlock = $block->getChildBlock('addto')) : ?>
-                                                <?= $addToBlock->setProduct($_product)->getChildHtml() ?>
                                             <?php endif; ?>
                                         </div>
                                     </div>

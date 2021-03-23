@@ -1,0 +1,36 @@
+<script>
+require([
+'jquery'
+], function ($) {
+$(function () { // to ensure that code evaluates on page load
+$(".minus").on("click", function(){
+var qty = $(this).closest("div.control").find("input");
+var value = Number(qty.val());
+if(value > 1) {
+value = value - 1;
+}
+qty.attr('value', value);
+})
+$(".plus").click(function(){
+var qty = $(this).closest("div.control").find("input");
+var value = Number(qty.val());
+value = value + 1;
+qty.attr('value', value);
+})
+});
+});
+</script>
+<script>
+    require([
+        'jquery',
+        'tabs',
+        'slick'
+    ], function($) {
+        $('.product-items').slick({
+            infinite: false,
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            arrows:true,
+        });
+    });
+</script>
