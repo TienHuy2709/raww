@@ -9,19 +9,40 @@
             slidesToShow: 3,
             slidesToScroll: 3,
             arrows:true,
+            variableWidth: true,
+            responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    infinite: true,
+                    arrows: true,
+                    variableWidth: false,
+
+                }
+            },
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    infinite: true,
+                    arrows: true,
+                    variableWidth: false,
+                }
+            },
+            {
+                breakpoint: 1440,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    infinite: true,
+                    arrows: true,
+                    variableWidth: false,
+                }
+            }
+            ]
         });
     });
-</script>
-<script>
-function myFunction() {
-  var moreText = document.getElementById("more");
-  var btnText = document.getElementById("myBtn");
-
-  if (more.style.display === "none") {
-    moreText.style.display = "none";
-  } else {
-    moreText.style.display = "inline";
-    btnText.style.display = "none";
-  }
-}
 </script>
