@@ -109,8 +109,28 @@
             }
         }
     }
+    .home-product {
+        .home-product-content .grid ol.product-items li.product-item .product-item-info {
+            background-color: white;
+            padding-top: 6px;
+            &:hover {
+                margin: 0;
+                padding: 3px 0px 28px 0px;
+            }
+            .product-item-details .product-item-inner .product-item-actions .actions-primary form button.action.tocart.primary {
+                padding: 4px 34px 0px 40px;
+            }
+        }
+        .widget .block-content .grid ol.widget-product-grid .slick-list .slick-track li.product-item .product-item-info .product-item-details {
+            margin-top: -5px;
+        }
+    }  
+    .swatch-attribute.color .swatch-attribute-options .swatch-option.color {
+        width: 36px;
+        height: 36px;
+    }
 }
-
+/*---------Min m---------------*/
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
     .banner-home {
         .banner-img {
@@ -124,7 +144,7 @@
             left: 11.2%;
             h2 {
                 line-height: 80px;
-                letter-spacing: -3px;
+                letter-spacing: -2.6px;
                 word-spacing: 1px;
                 font-size: 100px;
                 padding-right: 25%;
@@ -153,7 +173,7 @@
             top: 0;
             margin-left: 10%;
             margin-right: 10%;
-            margin-top: 7%;
+            margin-top: 6.9%;
             .content-top {
                 max-width: 400px;
                 max-height: 400px;
@@ -194,12 +214,11 @@
             max-width: 1280px;
             margin: auto;
             .superfood-title {
-                margin-bottom: 50px;
+                margin-bottom: 51px;
                 h2 {
                     font-size: 42px;
                     line-height: 48px;
-                    letter-spacing: -1.5px;
-                    word-spacing: -3px;
+                    letter-spacing: -1.8px;
                     margin-left: -5px;
                     margin-bottom: 33px;
                     padding: 0% 22%;
@@ -225,19 +244,25 @@
             }
             .superfood-button {
                 .action.primary {
+                    letter-spacing: -0.5px;
                     .lib-button-primary (
-                        @_button-padding: 15px 29px;
+                        @_button-padding: 16px 30px 12px;
                     );  
                 }
             }
         }
     }
+    .product-item-inner-mobile {
+        display: none;
+    }
     .home-product {
         background: url(http://127.0.0.1/magento/pub/media/wysiwyg/background-product-2.png) no-repeat;
-        margin-top: 3.7%;
+        margin-top: 3.8%;
         text-align: center;
         .home-product-content {
-            padding-top: 52px;
+            max-width: 1280px;
+            margin: auto;
+            padding: 52px 20px;
             .product-content-title {
                 h2 {
                     font-size: 32px;
@@ -246,12 +271,39 @@
                     letter-spacing: -2px;
                 }
             }
+            
         }
         
     }
+    .block-products-list.grid {
+        margin-top: 32px;
+        .slick-slide.slick-current {
+            margin-bottom: 0px;
+            margin-right: 10px;
+            margin-left: -20px;
+        }
+        .slick-slide {
+            box-sizing: border-box;
+        }
+    }
+    .control.product {
+        margin-left: 1px;
+    }
+    .slick-arrow {
+        top: -14.2%;   
+        &::before {
+            color: @color-white;
+        }
+    }
+    .slick-prev {
+        left: 15px;
+    }
+    .slick-next {
+        right: 55px;
+    }
     .home-block-3 {
         margin-bottom: 59px;
-        margin-top: 4.5%;
+        margin-top: 3.4%;
         .instagram {
             max-width: 1280px;
             padding: 0px 20px;
@@ -266,9 +318,11 @@
                     font-size: 18px;
                     line-height: 28px;
                     letter-spacing: -0.6px;
-                    margin-top: -15px;
+                    margin-top: -13px;
                     &::after {
                         font-size: 23px;
+                        position: relative;
+                        top: 2.5px;
                     }
                 }
             }
@@ -277,12 +331,12 @@
                 justify-content: center;
                 flex-wrap: wrap;
                 width: 100%;
-                margin-top: 25px;
+                margin-top: 24px;
                 margin-left: -9px;
                 margin-right: -10px;
                 .item {
                     width: 25%;
-                    margin-bottom: 15px;
+                    margin-bottom: 14px;
                     margin-right: 5px;
                     &:nth-child(4n) {
                         margin-right: -19px;
@@ -293,10 +347,10 @@
                 }
             }
             .instagram-button {
-                margin-top: -2px;
+                margin-top: 0px;
                 .action.primary {
                     .lib-button-primary (
-                        @_button-padding: 15px 31px;
+                        @_button-padding: 16px 31px 14px;
                     ); 
                 }
             }
@@ -320,7 +374,7 @@
                     padding-right: 10.5%;
                     padding-left: 10.5%;
                     word-spacing: -1px;
-                    margin-top: -15px;
+                    margin-top: -12px;
                     letter-spacing: -0.43px;
                 }
             }
@@ -340,7 +394,7 @@
             left: 100%;
         }
         input {
-            padding: 24px 19px;
+            padding: 24.5px 19px;
             letter-spacing: -0.65px;
             // .lib-form-element-input (
             //     @_padding: @input-text__padding;
@@ -350,12 +404,12 @@
             top: 0;
             right: -3.6%;
             span {
-                padding: 8px 18px 7px 17px;
+                padding: 8.5px 18px 7px 17px;
             }
         }
     }
 }
-
+/*---------Min l---------------*/
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l) {
     .banner-home {
         .banner-text {
@@ -407,14 +461,31 @@
             left: 123%;
             margin-top: 62%;
         }
-    }    
+    }
+    .block-products-list.grid {
+        .slick-slide.slick-current {            
+            margin-left: 0px;
+        }
+        .block-content {
+            .products-grid {
+                .product-items {
+                    .slick-slide {
+                        margin-left: 10px;
+                        margin-right: 8px;
+                    }
+                }
+            }
+        }
+    }
+        
+    
 }
-
+/*---------Min xl---------------*/
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__xl) {
     .home-block-4 {
         .subcribe {
             .subcribe-text {
-                top: 18%;
+                top: 17.8%;
                 left: 33.08%;
             }
         }
@@ -426,7 +497,30 @@
             left: 122.5%;
         }
     }
+    .home-product {
+        .home-product-content {
+            .block-products-list.grid {
+                .slick-slide.slick-current {            
+                    margin-right: 0px;
+                    margin-bottom: 40px;
+                }
+                .block-content {
+                    .products-grid {
+                        .product-items {
+                            .slick-slide.slick-active {
+                                    &:nth-child(3n+2) {
+                                        margin-left: 20px;
+                                        margin-right: 10px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
+/*---------Max m---------------*/
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
     .banner-home {
         margin-top: -13px;
@@ -506,17 +600,63 @@
     }
     .home-product {
         background: url(http://127.0.0.1/magento/pub/media/wysiwyg/background-product-2.png) no-repeat;
-        width: 100%;
-        // .product-background {
-        //     display: none;
-        // }
-        // .product-background-mobile {
-        //     margin-top: 40px;
-        //     img {
-        //         width: 767px;
-        //         object-fit: cover;
-        //     }
-        // }
+        margin-top: 3.8%;
+        text-align: center;
+        .home-product-content {
+            max-width: 1280px;
+            margin: auto;
+            padding: 52px 20px;
+            .product-content-title {
+                h2 {
+                    font-size: 32px;
+                    line-height: 74px;
+                    color: @color-white;
+                    letter-spacing: -2px;
+                }
+            }
+            .block-products-list.grid {
+                margin-top: 32px;
+                .slick-slide.slick-current {
+                    margin-bottom: 0px;
+                    margin-right: 10px;
+                    margin-left: -20px;
+                }
+                .slick-slide {
+                    box-sizing: border-box;
+                    //width: 360px;
+                    
+                }
+                .block-content {
+                    .products-grid {
+                        .product-items {
+                            .slick-slide.slick-active {
+                                    // &:nth-child(3n+2) {
+                                    //     .product-item {
+                                    //     margin-left: 33px;
+                                    //     margin-right: 33px;
+                                    // }
+                                //}
+                            }
+                        }
+                    }
+                }
+            }
+            .control.product {
+                margin-left: 1px;
+            }
+            .slick-arrow {
+                top: -14.2%;   
+                &::before {
+                    color: @color-white;
+                }
+            }
+            .slick-prev {
+                left: 15px;
+            }
+            .slick-next {
+                right: 55px;
+            }
+        }
     }
     .home-block-3 {
         margin-top: 32px;
@@ -614,8 +754,9 @@
             }
         }
     }
-}
 
+}
+/*---------Max s---------------*/
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__s) { 
     .home-block-3 {
         .instagram {
@@ -643,7 +784,7 @@
         }
     }
 }
-
+/*---------Max xs---------------*/
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__xs) {
     .home-block-2 {
         .block-superfood {
@@ -696,7 +837,7 @@
         }
     }
 }
-
+/*---------Max 380---------------*/
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__380) {
     .home-block-3 {
         .instagram {

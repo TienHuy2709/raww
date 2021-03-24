@@ -24,8 +24,11 @@
     <referenceContainer name="footer-container">
         <block class="Magento\Framework\View\Element\Template" name="footer_top" before="-" template="Magento_Theme::html/footer_top.phtml" />
         <block class="Magento\Framework\View\Element\Template" name="footer_center" after="footer_top" template="Magento_Theme::html/footer_center.phtml" />
-         <block class="Magento\Framework\View\Element\Template" name="footer_center_mobile" after="footer_center" template="Magento_Theme::html/footer_center_mobile.phtml" />
-         <block class="Magento\Framework\View\Element\Template" name="footer_bottom" after="-" template="Magento_Theme::html/footer_bottom.phtml" />
+        <block class="Magento\Framework\View\Element\Template" name="footer_center_mobile" after="footer_center" template="Magento_Theme::html/footer_center_mobile.phtml" />
+        <block class="Magento\Framework\View\Element\Template" name="footer_bottom" after="-" template="Magento_Theme::html/footer_bottom.phtml" />
+    </referenceContainer>
+    <referenceContainer name="before.body.end">
+            <block class="Magento\Framework\View\Element\Template" name="custom_js" before="-" template="Magento_Theme::html/custom_js.phtml" />
     </referenceContainer>
     </body>
 </page>

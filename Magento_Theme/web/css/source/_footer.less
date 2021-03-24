@@ -32,7 +32,7 @@
     }
    
 }
-
+/*---------Min m---------------*/
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
     .page-footer {
         background: @color-white;
@@ -62,14 +62,17 @@
         .item {
             width: 25%;
             margin-top: 29px;
+            h3 {
+                word-spacing: 3px;
+            }
             ul {
                 padding: 0;
-                margin-top: -5px;
+                margin-top: -6px;
                 li {
                     list-style-type: none;
                     margin-bottom: 0;
                     a {
-                       letter-spacing: -0.6px;
+                       letter-spacing: -0.45px;
                     }
                 }
             }
@@ -80,7 +83,7 @@
                 padding-left: 39px;
             }
             &:nth-child(4) {
-                margin-top: 63px;
+                margin-top: 66px;
                 padding-left: 3.3%;
                 .icon-awesome a{
                     &:nth-child(1)::after,
@@ -105,17 +108,17 @@
             display: inline-block;
             .content-left {
                 float: left;
-                margin-top: 34px;
+                margin-top: 36px;
                 letter-spacing: -0.4px;
             }
             .content-right {
                 float: right;
-                margin-top: 31px;
+                margin-top: 32px;
             }
         }
     }
 }
-
+/*---------Min l---------------*/
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l) {
     .footer-top {
         ul {
@@ -133,7 +136,7 @@
         }
     }
 }
-
+/*---------Max m---------------*/
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
     .page-footer {
         margin-top: 12px;
@@ -215,7 +218,7 @@
         }
     }
 }
-
+/*---------Max xs---------------*/
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__xs) {
     .footer-top { 
         ul{            
