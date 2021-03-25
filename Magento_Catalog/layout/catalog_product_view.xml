@@ -9,10 +9,10 @@
 
     <body>
         <move element="page.main.title" destination="product.info.main"  after="attribute.new" />
-        <move element="product.info.details" destination="main.top"  after="product.info.media" />
-        <move element="product.info.main" destination="main.top"  before="-" />
-        <move element="product.info.media" destination="main.top"  after="product.info.main" />
-        <referenceBlock name="reviews.tab" remove="true"/>
+        <move element="product.info.details" destination="main.top.content"  after="product.info.media" />
+        <move element="product.info.main" destination="main.top.content"  before="-" />
+        <move element="product.info.media" destination="main.top.content"  after="product.info.main" />
+        <!-- <referenceBlock name="reviews.tab" remove="true"/> -->
         <referenceBlock name="product.info.sku" remove="true" />
         <referenceBlock name="product.info.stock.sku" remove="true"/>
         <referenceBlock name="catalog.compare.sidebar" remove="true"/>
@@ -24,6 +24,9 @@
             <container name="attribute.new" htmlTag="div" htmlClass="attribute-new" before="-" >
                 <block class="Magento\Catalog\Block\Product\View\Description" name="new.attribute" template="Magento_Catalog::product/view/attributenew.phtml" before="-"  />
             </container>
+            <container name="container.afterpay" htmlTag="div" htmlClass="container-afterpay" after="product.info.price" >
+            <block class="Magento\Framework\View\Element\Template" name="after.pay" template="Magento_Catalog::afterpay.phtml" after="-" />
+            </container>
             <container name="container.category.smells" htmlTag="div" htmlClass="container-category-smells" after="-" >
             <block class="Magento\Cms\Block\Block" name="category.smells">
                 <arguments>
@@ -33,28 +36,30 @@
         </container>
         </referenceContainer>
         <referenceBlock name="product.info.details">
+            <block class="Magento\Catalog\Block\Product\View" name="howto-tab" template="Magento_Catalog::product/view/howto.phtml" group="detailed_info">
+                <arguments>
+                    <argument translate="true" name="title" xsi:type="string">HOW TO</argument>
+                     <argument name="sort_order" xsi:type="string">11</argument>
+                </arguments>
+            </block>
             <block class="Magento\Catalog\Block\Product\View" name="faq-tab" template="Magento_Catalog::product/view/faq.phtml" group="detailed_info">
                <arguments>
                    <argument translate="true" name="title" xsi:type="string">FAQ</argument>
-                    <argument name="priority" xsi:type="string">4</argument>
+                    <argument name="sort_order" xsi:type="string">13</argument>
                </arguments>
            </block>
-           <block class="Magento\Catalog\Block\Product\View" name="howto-tab" template="Magento_Catalog::product/view/howto.phtml" group="detailed_info">
-            <arguments>
-                <argument translate="true" name="title" xsi:type="string">HOW TO</argument>
-                 <argument name="priority" xsi:type="string">2</argument>
-            </arguments>
-        </block>
         <block class="Magento\Catalog\Block\Product\View" name="ingredients-tab" template="Magento_Catalog::product/view/ingredients.phtml" group="detailed_info">
             <arguments>
                 <argument translate="true" name="title" xsi:type="string">Ingredients</argument>
-                 <argument name="priority" xsi:type="string">3</argument>
+                 <argument name="sort_order" xsi:type="string">12</argument>
             </arguments>
         </block>
        </referenceBlock>
        <referenceContainer name="page.wrapper">
         <block class="Magento\Framework\View\Element\Template" name="addjs" template="Magento_Catalog::addjs.phtml"/>
         <container name="main.top" htmlTag="div" htmlClass="main-top">
+            <container name="main.top.content" htmlTag="div" htmlClass="main-top-content">
+                </container>
         </container>
             <container name="container.brgcategory" htmlTag="div" htmlClass="container-bgrcategory">
                 <block class="Magento\Framework\View\Element\Template" name="banner.bottom" template="Magento_Catalog::banner_bottom.phtml"/>
