@@ -10,6 +10,7 @@
             max-width: 1280px;
             margin: auto;
             padding: 0;
+            box-sizing: border-box;
         }
         li {
             list-style-type: none;
@@ -42,7 +43,7 @@
         padding-bottom: 55px;
         ul{            
             li {
-                width: 25%;               
+                width: 20%;               
                 a {                   
                     img {                      
                         margin-right: 15px;
@@ -58,9 +59,8 @@
         margin: auto;
         width: 100%;
         display: flex;
-        flex-wrap: wrap;
+        box-sizing: border-box;
         .item {
-            width: 25%;
             margin-top: 29px;
             h3 {
                 word-spacing: 3px;
@@ -76,15 +76,17 @@
                     }
                 }
             }
+            &:nth-child(1) {
+                width: 26.5%;
+            }
             &:nth-child(2) {
-                padding-left: 20px;
+                width: 26.5%;
             }
             &:nth-child(3) {
-                padding-left: 39px;
+                width: 25.2%;
             }
             &:nth-child(4) {
                 margin-top: 66px;
-                padding-left: 3.3%;
                 .icon-awesome a{
                     &:nth-child(1)::after,
                     &:nth-child(2)::after {
@@ -106,6 +108,7 @@
             width: 100%;
             margin: auto;
             display: inline-block;
+            box-sizing: border-box;
             .content-left {
                 float: left;
                 margin-top: 36px;
@@ -124,13 +127,15 @@
         ul {
             li {
                 &:nth-child(1) {
-                    padding-right: 3.3%;
+                    margin-left: 10px;
+                    padding-right: 6.8%;
+                }
+                &:nth-child(2) {
+                    margin-top: 4px;
+                    padding-right: 7.9%;
                 }
                 &:nth-child(3) {
-                    padding-left: 5.9%;
-                }
-                &:nth-child(4) {
-                    padding-left: 5.4%;
+                    padding-right: 4.5%;
                 }
             }
         }
@@ -138,6 +143,9 @@
 }
 /*---------Max m---------------*/
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+    body * {
+        box-sizing: border-box;
+    }
     .page-footer {
         margin-top: 12px;
     }
