@@ -12,7 +12,6 @@
         <referenceContainer name="main.content">
             <block class="Magento\Framework\View\Element\Template" name="banner_home" before="-" template="Magento_Cms::banner_home.phtml" />
             <block class="Magento\Framework\View\Element\Template" name="home_block_1" after="banner_home" template="Magento_Cms::home_block_1.phtml" />
-            <!-- <block class="Magento\Framework\View\Element\Template" name="block_superfood" after="home_block_1" template="Magento_Cms::block_superfood.phtml" /> -->
             <block class="Magento\Framework\View\Element\Template" name="home_product" after="block_superfood" template="Magento_Cms::home_product.phtml" />
             <block class="Magento\Framework\View\Element\Template" name="home_block_3" after="home_product" template="Magento_Cms::home_block_3.phtml" />
             <block class="Magento\Framework\View\Element\Template" name="home_block_4" after="home_block_3" template="Magento_Cms::home_block_4.phtml" />
