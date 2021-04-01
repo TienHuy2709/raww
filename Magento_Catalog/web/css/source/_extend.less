@@ -308,6 +308,7 @@
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__xl){
     .column.main {
         .filter.block {
+            width: 65%;
             .block-content.filter-content {
                 .filter-current {
                     ol {
@@ -325,6 +326,7 @@
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l){
     .column.main {
         .filter.block {
+            width: 60%;
             .block-content.filter-content {
                 display: inline-flex;
                 .filter-options-item {
@@ -343,6 +345,7 @@
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m){
     .column.main {
         .filter.block {
+            width: 60%;
             float: left;
             border-top: 0;
             margin-top: -33px;
@@ -553,6 +556,11 @@
                             .swatch-attribute-options{
                                 display: inline-block;
                                 margin: 0px;
+                                max-height: 42px;
+                                &:hover {
+                                    max-height: 100%;
+                                    transition: 0.5s;
+                                }
                                 .swatch-option.color {
                                     width: 30px;
                                     height: 30px;
@@ -571,11 +579,13 @@
                                         border: 3px solid blue;
                                         box-shadow: unset;
                                         margin-bottom: 2.6rem;
+                                        transition: 0.5s;
                                     }
                                     &:hover {
                                         border: 3px solid @color-white;
                                         box-shadow: 0 0 3px blue;
                                         margin-bottom: 2.6rem;
+                                        transition: 0.5s;
                                     }
                                 }
                                 .swatch-more {
@@ -628,6 +638,9 @@
                 width: 32%;
                 max-width: 400px;
                 margin-bottom: -8px;
+                .product-item-info {
+                    text-align: unset;
+                }
             }
         }
     }
@@ -650,6 +663,7 @@
             li.item.product-item, li.product-item {
                 width: 46.6%;
                 .product-item-info {
+                    text-align: center;
                     &:hover {
                         margin : -5px;
                         padding : 5px 0px 28px 5px;
@@ -853,6 +867,7 @@
     .grid {
         ol.product-items {
             li.item.product-item, li.product-item {
+                width: 100%;
                 .product-item-info {
                     text-align: center;
                     .product-item-photo {
@@ -883,6 +898,31 @@
                     margin-left: 0px;
                     margin-right: 10px;
                 }
+            }
+        }
+    }
+}
+
+/*--------------Design swatch-option---------------*/
+& when (@media-common = true) {
+    .swatch-option-tooltip {
+        border: 1px solid #e8d5d2;
+        padding: 0 5px;
+        max-width: 140px;
+        max-height: 100%;
+        min-height: 20px;
+        min-width: 20px;
+        text-align: center;
+        background: #fff;
+        .title {
+            font-size: 12px;
+            line-height: 24px;
+        }
+        .corner {
+            transform: rotate(180deg);
+            top: 0;
+            &:after, &:before {
+                border-color: #e8d5d2 transparent transparent transparent;
             }
         }
     }
