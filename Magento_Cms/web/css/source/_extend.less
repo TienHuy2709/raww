@@ -1,4 +1,7 @@
 & when (@media-common = true) {
+    .page .messages {
+        margin-top: 15px;
+    }
     .banner-home {
         position: relative;
         .banner-text {
@@ -22,6 +25,10 @@
                 border-radius: 3px;
                 word-spacing: -2px;
                 text-decoration: none;
+                &:hover {
+                    background-color: @color-black;
+                    color: @color-white;
+                }
             }
         }
     }
@@ -41,6 +48,10 @@
                         font-family: @font-family__avenir-black;
                         max-width: 56px;
                         margin:auto;
+                        &:hover {
+                            text-decoration: underline;
+                            cursor: pointer;
+                        }
                     }
                 }
             }
@@ -110,18 +121,54 @@
         }
     }
     .home-product {
-        .home-product-content .grid ol.product-items li.product-item .product-item-info {
-            background-color: white;
-            &:hover {
-                margin: 0;
-                padding: 3px 0px 28px 0px;
-            }
-            .product-item-details .product-item-inner .product-item-actions .actions-primary form button.action.tocart.primary {
-                padding: 4px 34px 0px 40px;
-            }
+        background: url('../images/background-product-2.png') no-repeat;
+        .home-product-content .grid {
+            ol.product-items {
+                li.product-item {
+                    .product-item-info {
+                        background-color: white;
+                        &:hover {
+                            margin: 0;
+                            padding: 3px 0px 28px 0px;
+                        }
+                        .product-item-details {
+                            .product-item-inner {
+                                .product-item-actions {
+                                    .actions-primary {
+                                        form {
+                                            button.action.tocart.primary {
+                                                .lib-button-primary (
+                                                    @_button-padding: 4px 34px 0px 40px;
+                                                );
+                                            }
+                                        }
+                                    } 
+                                }
+                            }
+                        }
+                       
+                    }
+                }  
+            }  
         }
-        .widget .block-content .grid ol.widget-product-grid .slick-list .slick-track li.product-item .product-item-info .product-item-details {
-            margin-top: -5px;
+        .widget {
+            .block-content {
+                .grid {
+                    ol.widget-product-grid {
+                        .slick-list {
+                            .slick-track {
+                                li.product-item {
+                                    .product-item-info {
+                                        .product-item-details {
+                                            margin-top: -5px;
+                                        }
+                                    }                                   
+                                }                                
+                            }                           
+                        }                       
+                    }                   
+                }               
+            }
         }
     }  
 }
@@ -148,6 +195,7 @@
             p {
                 padding-right: 35%;
                 margin-bottom: 20px;
+                letter-spacing: 0px;
             }
             a {
                 padding: 17px 28px 17px 32px;
@@ -251,11 +299,18 @@
         display: none;
     }
     .home-product {
-        background: url(http://127.0.0.1/magento/pub/media/wysiwyg/background-product-2.png) no-repeat;
         margin-top: 3.8%;
         text-align: center;
-        .home-product-content .grid ol.product-items li.product-item .product-item-info {
-            padding-top: 6px;
+        .home-product-content {
+            .grid {
+                ol.product-items {
+                    li.product-item {
+                        .product-item-info {
+                            padding-top: 6px;
+                        }
+                    }
+                }
+            }
         }
         .home-product-content {
             max-width: 1280px;
@@ -604,7 +659,6 @@
         display: none;
     }
     .home-product {
-        background: url(http://127.0.0.1/magento/pub/media/wysiwyg/background-product-2.png) no-repeat;
         margin-top: 3.8%;
         text-align: center;
         .home-product-content {

@@ -9,6 +9,7 @@
     <body>
         <move element="form.subscribe" destination="main.content" after="home_block_3"/>
         <move element="columns" destination="main.content" after="home_block_1"/>
+         <move element="page.messages" destination="main.content" before="-"/>
         <referenceContainer name="main.content">
             <block class="Magento\Framework\View\Element\Template" name="banner_home" before="-" template="Magento_Cms::banner_home.phtml" />
             <block class="Magento\Framework\View\Element\Template" name="home_block_1" after="banner_home" template="Magento_Cms::home_block_1.phtml" />
