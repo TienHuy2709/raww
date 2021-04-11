@@ -7,18 +7,19 @@
 -->
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
-        <move element="form.subscribe" destination="main.content" after="home_block_3"/>
-        <move element="columns" destination="main.content" after="home_block_1"/>
-         <move element="page.messages" destination="main.content" before="-"/>
+        <move element="form.subscribe" destination="main.content" after="home_instagram"/>
+        <move element="columns" destination="main.content" after="home_tiles"/>
+        <move element="page.messages" destination="main.content" before="-"/>
+         <referenceBlock name="form.subscribe" display="true"/>
         <referenceContainer name="main.content">
-            <block class="Magento\Framework\View\Element\Template" name="banner_home" before="-" template="Magento_Cms::banner_home.phtml" />
-            <block class="Magento\Framework\View\Element\Template" name="home_block_1" after="banner_home" template="Magento_Cms::home_block_1.phtml" />
-            <block class="Magento\Framework\View\Element\Template" name="home_product" after="block_superfood" template="Magento_Cms::home_product.phtml" />
-            <block class="Magento\Framework\View\Element\Template" name="home_block_3" after="home_product" template="Magento_Cms::home_block_3.phtml" />
-            <block class="Magento\Framework\View\Element\Template" name="home_block_4" after="home_block_3" template="Magento_Cms::home_block_4.phtml" />
+            <block class="Magento\Framework\View\Element\Template" name="home_banner" before="-" template="Magento_Cms::home_banner.phtml" />
+            <block class="Magento\Framework\View\Element\Template" name="home_tiles" after="home_banner" template="Magento_Cms::home_tiles.phtml" />
+            <block class="Magento\Framework\View\Element\Template" name="home_product" after="home_superfood" template="Magento_Cms::home_product.phtml" />
+            <block class="Magento\Framework\View\Element\Template" name="home_instagram" after="home_product" template="Magento_Cms::home_instagram.phtml" />
+            <block class="Magento\Framework\View\Element\Template" name="home_subcribe" after="home_instagram" template="Magento_Cms::home_subcribe.phtml" />
         </referenceContainer>
         <referenceContainer name="main">
-            <block class="Magento\Framework\View\Element\Template" name="block_superfood" before="-" template="Magento_Cms::block_superfood.phtml" />
+            <block class="Magento\Framework\View\Element\Template" name="home_superfood" before="-" template="Magento_Cms::home_superfood.phtml" />
         </referenceContainer>
     </body>
 </page>

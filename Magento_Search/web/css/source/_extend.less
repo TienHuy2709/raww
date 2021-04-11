@@ -1,24 +1,27 @@
-& when (@media-common = true) {
-    
-}
-
+/*---------Min m---------------*/
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
         .block.block-search {
-            float: left;
-            position: absolute;
-            left: 39%;
-            padding: 6px 0px;
-            input {
-                border: none;
-                font-size: 14px;
-                line-height: 20px;
-                font-family: @font-family__avenir-roman;
-                color: @color-black3;
-                letter-spacing: -0.25px;            
-            }           
+            float: none;
+            display: inline-block;
+            padding: 6px 0px 1px;
+            left: 5%;
+            width: 30%;
+            border-bottom: 2px solid @color-gray-darken0;
+            .block-content {
+                margin-left: 25px;
+                input {
+                    border: none;
+                    font-size: 14px;
+                    line-height: 20px;
+                    font-family: @font-family__avenir-roman;
+                    color: @color-black3;
+                    letter-spacing: -0.25px;            
+                }  
+            }         
             .actions {
                 position: absolute;
                 top: 6px;
+                left: 24px;
                 .search {
                     right: 0;
                     &::before {
@@ -29,7 +32,20 @@
     }
    
 }
-
+/*---------Min l---------------*/
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l) {
+    .block.block-search {
+        left: 18%;
+    }
+}
+/*---------Min xl---------------*/
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__xl) {
+    .block.block-search {
+        left: 23.1%;
+        width: 400px;
+    }
+}
+/*---------Max m---------------*/
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
     .block.block-search {
         display: none;

@@ -1,8 +1,9 @@
 & when (@media-common = true) {
     .page .messages {
         margin-top: 15px;
+        margin-bottom: 15px;
     }
-    .banner-home {
+    .home-banner{
         position: relative;
         .banner-text {
             position: absolute;
@@ -32,9 +33,9 @@
             }
         }
     }
-    .home-block-2 {
+    .home-raww-superfood {
         text-align: center;
-        .block-superfood {
+        .home-superfood {
             .superfood-content {
                 display: flex;
                 justify-content: center;
@@ -57,7 +58,7 @@
             }
         }
     }
-    .home-block-3 {
+    .home-instagram {
         text-align: center;
         .instagram {
             margin: auto;
@@ -82,7 +83,7 @@
             }
         }
     }
-    .home-block-4 {
+    .home-subcribe {
         .subcribe {
             position: relative;
             text-align: center;
@@ -129,7 +130,7 @@
                         background-color: white;
                         &:hover {
                             margin: 0;
-                            padding: 3px 0px 28px 0px;
+                            padding: 6px 0px 28px 0px;
                         }
                         .product-item-details {
                             .product-item-inner {
@@ -174,7 +175,7 @@
 }
 /*---------Min m---------------*/
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
-    .banner-home {
+    .home-banner {
         .banner-img {
             width: auto;
         }
@@ -202,21 +203,21 @@
             }
         }
     }
-    .home-block-1 {
-        position: relative;
+    .home-tiles {
         margin-top: -6px;
-        margin-bottom: 5.7%;
+        margin-bottom: 6%;
+        background: url('../images/homepage/background_tiles.png') no-repeat;
         .home-content-top {
             max-width: 1280px;
             padding-left: 20px;
             padding-right: 20px;
             box-sizing: border-box;
             display: flex;
-            position: absolute;
             top: 0;
             margin-left: 10%;
             margin-right: 10%;
-            margin-top: 6.9%;
+            padding-top: 6.9%;
+            padding-bottom: 6.8%;
             .content-top {
                 max-width: 400px;
                 max-height: 400px;
@@ -224,7 +225,7 @@
                 position: relative;
                 img {
                     width: 100%;
-                    transform: scale(1.08);
+                    transform: scale(1.09);
                     cursor: pointer;
                 }
                 &:first-child {
@@ -251,8 +252,8 @@
             }
         }
     }
-    .home-block-2 {
-        .block-superfood {
+    .home-raww-superfood {
+        .home-superfood {
             padding: 0px 20px;
             max-width: 1280px;
             margin: auto;
@@ -263,7 +264,7 @@
                     line-height: 48px;
                     letter-spacing: -1.8px;
                     margin-left: -5px;
-                    margin-bottom: 33px;
+                    margin-bottom: 34px;
                     padding: 0% 22%;
                 }
                 p {
@@ -357,7 +358,7 @@
             }
         }
     }
-    .home-block-3 {
+    .home-instagram {
         margin-bottom: 59px;
         margin-top: 3.4%;
         .instagram {
@@ -413,7 +414,7 @@
             }
         }
     }
-    .home-block-4 {
+    .home-subcribe {
         .subcribe {
             .subcribe-text {
                 top: -12%;
@@ -465,7 +466,7 @@
 }
 /*---------Min l---------------*/
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l) {
-    .banner-home {
+    .home-banner {
         .banner-text {
             top: 21%;
             h2 {
@@ -478,7 +479,7 @@
             }
         }
     }
-    .home-block-1 {
+    .home-tiles {
         .home-content-top {
             .content-top {
                 a {
@@ -487,8 +488,8 @@
             }
         }
     }
-    .home-block-2 {
-        .block-superfood {
+    .home-raww-superfood {
+        .home-superfood {
             .superfood-content {
                 padding-left: 3.7%;
                 padding-right: 3.7%;
@@ -501,7 +502,7 @@
             }
         }
     }
-    .home-block-4 {
+    .home-subcribe {
         .subcribe {
             .subcribe-text {
                 top: 8%;
@@ -534,7 +535,7 @@
 }
 /*---------Min xl---------------*/
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__xl) {
-    .home-block-4 {
+    .home-subcribe {
         .subcribe {
             .subcribe-text {
                 top: 17.8%;
@@ -574,7 +575,7 @@
 }
 /*---------Max m---------------*/
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
-    .banner-home {
+    .home-banner {
         margin-top: -13px;
         .banner-img {
             display: none;
@@ -604,17 +605,17 @@
             }
         }
     }
-    .home-block-1 {
+    .home-tiles{
         display: none;
     }
-    .home-block-2 {
-        .block-superfood {
+    .home-raww-superfood{
+        .home-superfood {
             .superfood-title {
                 padding: 0px;
                 h2 {
                     font-size: 24px;
                     line-height: 28px;
-                    padding: 6px 40px 0px 25px;
+                    padding: 6.5px 40px 0px 25px;
                     letter-spacing: -1px;
                 }
                 p {
@@ -622,6 +623,7 @@
                     line-height: 24px;
                     margin-top: -3px;
                     padding-right: 3px;
+                    letter-spacing: 0px;
                 }
             }
             .superfood-content {
@@ -644,7 +646,7 @@
                 margin: 0px -10px;
                 .action.primary {
                     .lib-button-primary (
-                        @_button-padding: 14px 0px;
+                        @_button-padding: 15px 0px 13px;
                         @_button-width: 100%;
                     );
                     letter-spacing: -0.5px;
@@ -725,14 +727,14 @@
     }
     .home-product {
         .slick-arrow.slick-prev {
-            left: 5px;
+            left: -5px;
             top: -9.6%;
             &::before {
                 color: @color-white;
             }
         }
         .slick-arrow.slick-next {
-            right: 45px;
+            right: 35px;
             top: -9.6%;
             &::before {
                 color: @color-white;
@@ -757,7 +759,7 @@
             }
         }
     }
-    .home-block-3 {
+    .home-instagram{
         margin-top: 37px;
         .instagram {
             .instagram-title {
@@ -772,6 +774,7 @@
                     padding-right: 20px;
                     font-size: 15px;
                     line-height: 21px;
+                    letter-spacing: 0px;
                     &::after {
                         font-size: 20px;
                     }
@@ -800,7 +803,7 @@
             }
         }
     }
-    .home-block-4 {
+    .home-subcribe {
         text-align: center;
         .subcribe {
             .subcribe-text {
@@ -816,6 +819,7 @@
                 p {
                     font-size: 15px;
                     padding-right: 5px;
+                    letter-spacing: 0px;
                 }
             }
             .subcribe-image {
@@ -856,7 +860,7 @@
 }
 /*---------Max s---------------*/
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__s) {
-    .home-block-3 {
+    .home-instagram {
         .instagram {
             .instagram-button {
                 .action.primary {
@@ -874,7 +878,7 @@
             margin-top: 30%;
         }
     }
-    .home-block-4 {
+    .home-subcribe {
         .subcribe {
             .subcribe-text {
                 left: 9%;
@@ -914,8 +918,8 @@
 }
 /*---------Max xs---------------*/
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__xs) {
-    .home-block-2 {
-        .block-superfood {
+    .home-raww-superfood{
+        .home-superfood  {
             .superfood-content {
                 .icons {
                     width: 33.3%;
@@ -926,7 +930,7 @@
             }
         }
     }
-    .home-block-3 {
+    .home-instagram {
         .instagram {
             .instagram-image {
                 .item {
@@ -951,7 +955,7 @@
             }
         }
     }
-    .home-block-4 {
+    .home-subcribe {
         .subcribe {
             .subcribe-text {
                 left: 0%;
@@ -1000,7 +1004,7 @@
 }
 /*---------Max 380---------------*/
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__380) {
-    .home-block-3 {
+    .home-instagram{
         .instagram {
             .instagram-image {
                 .item{
