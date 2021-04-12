@@ -1,0 +1,24 @@
+/*--------------Design swatch-option---------------*/
+& when (@media-common = true) {
+    .swatch-option-tooltip {
+        border: 1px solid #e8d5d2;
+        padding: 0 5px;
+        max-width: 140px;
+        max-height: 100%;
+        min-height: 20px;
+        min-width: 20px;
+        text-align: center;
+        background: #fff;
+        .title {
+            font-size: 12px;
+            line-height: 24px;
+        }
+        .corner {
+            transform: rotate(180deg);
+            top: 0;
+            &:after, &:before {
+                border-color: #e8d5d2 transparent transparent transparent;
+            }
+        }
+    }
+}
