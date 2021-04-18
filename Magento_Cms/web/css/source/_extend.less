@@ -42,16 +42,18 @@
                 flex-wrap: wrap;
                 padding: 0;
                 .icons {
+                    .icons-image {
+                        line-height: 20px;
+                    }
                     .icons-content {
-                        font-size: 14px;
-                        line-height: 15px;
-                        text-transform: uppercase;
-                        font-family: @font-family__avenir-black;
                         max-width: 56px;
+                        line-height: 15px;
                         margin:auto;
-                        &:hover {
-                            text-decoration: underline;
-                            cursor: pointer;
+                        a {
+                            font-family: @font-family__avenir-black;
+                            font-size: 14px;
+                            line-height: 0px;
+                            text-transform: uppercase;
                         }
                     }
                 }
@@ -277,10 +279,10 @@
                 }
             }
             .superfood-content {
-                margin-bottom: 10px;
+                margin-bottom: 8px;
                 .icons {
                     width: 16.66%;
-                    margin-bottom: 25px;
+                    margin-bottom: 28px;
                     &:nth-child(n+13){
                         display: none;
                     }
@@ -630,7 +632,7 @@
                 margin: 24.3px -17px 0px -17px;
                 .icons {
                     width: 20%;
-                    margin-bottom: 25.2px;
+                    margin-bottom: 27px;
                     .icons-image {
                         img {
                             max-width: 90px;
